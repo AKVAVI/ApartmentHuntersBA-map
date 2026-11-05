@@ -1,0 +1,398 @@
+{
+  "A-0001": {
+    "lat": -34.5977324,
+    "lng": -58.4256812,
+    "approx": false,
+    "query": "Avenida Estado de Israel 4245, Villa Crespo, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0002": {
+    "lat": -34.588234,
+    "lng": -58.404013,
+    "approx": false,
+    "query": "French 2900, Recoleta, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0003": {
+    "lat": -34.5732966,
+    "lng": -58.4412088,
+    "approx": false,
+    "query": "Zapata 359, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0004": {
+    "lat": -34.5732966,
+    "lng": -58.4412088,
+    "approx": false,
+    "query": "Zapata 359, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0005": {
+    "lat": -34.5904225,
+    "lng": -58.4356817,
+    "approx": false,
+    "query": "Avenida Córdoba 5161, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0006": {
+    "lat": -34.5688928,
+    "lng": -58.4452221,
+    "approx": false,
+    "query": "Teodoro García 2361, Palermo, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0007": {
+    "lat": -34.5795518,
+    "lng": -58.4331218,
+    "approx": false,
+    "query": "Bonpland 2200, Palermo Hollywood, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0008": {
+    "lat": -34.5915488,
+    "lng": -58.4261747,
+    "approx": false,
+    "query": "Scalabrini Ortiz 1492, Palermo, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0009": {
+    "lat": -34.5832422,
+    "lng": -58.4341993,
+    "approx": false,
+    "query": "Costa Rica 5530, Palermo, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0010": {
+    "lat": -34.5834573,
+    "lng": -58.4282494,
+    "approx": false,
+    "query": "Fray Justo María de Oro 2100, Palermo Soho, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0011": {
+    "lat": null,
+    "lng": null,
+    "approx": true,
+    "query": null
+  },
+  "A-0012": {
+    "lat": -34.5736954,
+    "lng": -58.4366859,
+    "approx": false,
+    "query": "Concepción Arenal 3400, Palermo, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0013": {
+    "lat": -34.5947819,
+    "lng": -58.3893754,
+    "approx": false,
+    "query": "Arenales 1560, Recoleta, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0014": {
+    "lat": -34.5905668,
+    "lng": -58.4328839,
+    "approx": false,
+    "query": "Serrano 1335, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0015": {
+    "lat": -34.5945863,
+    "lng": -58.4218555,
+    "approx": false,
+    "query": "Honduras 4154, Palermo, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0016": {
+    "lat": -34.5702531,
+    "lng": -58.4233651,
+    "approx": false,
+    "query": "Avenida Dorrego, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0017": {
+    "lat": -34.5849422,
+    "lng": -58.4391636,
+    "approx": false,
+    "query": "Cabrera 3900, Palermo Hollywood, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0018": {
+    "lat": null,
+    "lng": null,
+    "approx": true,
+    "query": null
+  },
+  "A-0019": {
+    "lat": -34.5883535,
+    "lng": -58.4388011,
+    "approx": false,
+    "query": "Avenida Córdoba 5443, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0020": {
+    "lat": -34.5900841,
+    "lng": -58.3919113,
+    "approx": false,
+    "query": "Vicente López 1900, Recoleta, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0021": {
+    "lat": -34.5754405,
+    "lng": -58.4360654,
+    "approx": false,
+    "query": "Avenida Dorrego 1940, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0022": {
+    "lat": -34.5872248,
+    "lng": -58.4056264,
+    "approx": false,
+    "query": "Sánchez de Bustamante 2200, Recoleta, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0023": {
+    "lat": -34.5830299,
+    "lng": -58.433082,
+    "approx": false,
+    "query": "Humboldt 1945, Palermo Hollywood, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0024": {
+    "lat": -34.5880318,
+    "lng": -58.4066195,
+    "approx": false,
+    "query": "Sánchez de Bustamante 2100, Barrio Norte, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0025": {
+    "lat": -34.5732966,
+    "lng": -58.4412088,
+    "approx": false,
+    "query": "Zapata 359, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0026": {
+    "lat": -34.5732966,
+    "lng": -58.4412088,
+    "approx": false,
+    "query": "Zapata 359, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0027": {
+    "lat": -34.5700595,
+    "lng": -58.4347068,
+    "approx": false,
+    "query": "Báez 644, Las Cañitas, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0028": {
+    "lat": -34.5874316,
+    "lng": -58.415638,
+    "approx": false,
+    "query": "Güemes 3800, Palermo, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0029": {
+    "lat": -34.5542118,
+    "lng": -58.4550493,
+    "approx": false,
+    "query": "11 de Septiembre de 1888 2600, Belgrano C, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0030": {
+    "lat": -34.5796456,
+    "lng": -58.4329618,
+    "approx": false,
+    "query": "Guatemala 5700, Palermo Hollywood, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "V-0001": {
+    "lat": -34.5736954,
+    "lng": -58.4366859,
+    "approx": false,
+    "query": "Concepción Arenal 2900, Palermo, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0031": {
+    "lat": -34.5599951,
+    "lng": -58.4666269,
+    "approx": false,
+    "query": "Doctor Pedro Ignacio Rivera 3000, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0032": {
+    "lat": -34.5863373,
+    "lng": -58.4263932,
+    "approx": false,
+    "query": "Jorge Luis Borges 1965, Palermo Soho, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0033": {
+    "lat": -34.5766227,
+    "lng": -58.4535956,
+    "approx": false,
+    "query": "Céspedes 3249, Colegiales, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0034": {
+    "lat": -34.5921431,
+    "lng": -58.3943163,
+    "approx": false,
+    "query": "Ayacucho, Recoleta, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0035": {
+    "lat": -34.5890701,
+    "lng": -58.4021765,
+    "approx": false,
+    "query": "French 2727, Recoleta, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0036": {
+    "lat": -34.5754462,
+    "lng": -58.4038805,
+    "approx": false,
+    "query": "Jerónimo Salguero 2533, Palermo Chico, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0037": {
+    "lat": -34.5528178,
+    "lng": -58.4481897,
+    "approx": false,
+    "query": "Blanco Encalada 1322, Belgrano, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0038": {
+    "lat": -34.5598603,
+    "lng": -58.4433847,
+    "approx": false,
+    "query": "Migueletes 700, Belgrano, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0039": {
+    "lat": -34.5547001,
+    "lng": -58.4934835,
+    "approx": false,
+    "query": "Avenida Ruiz Huidobro 4666, Saavedra, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0040": {
+    "lat": -34.5549237,
+    "lng": -58.460044,
+    "approx": false,
+    "query": "Cuba 2746, Belgrano, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0041": {
+    "lat": -34.5540208,
+    "lng": -58.4381217,
+    "approx": false,
+    "query": "Ramsay 1895, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0042": {
+    "lat": -34.5957295,
+    "lng": -58.412815,
+    "approx": false,
+    "query": "Sánchez de Bustamante 1300, Recoleta, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0043": {
+    "lat": -34.5739488,
+    "lng": -58.4323501,
+    "approx": false,
+    "query": "Avenida Luis María Campos 250, Las Cañitas, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0044": {
+    "lat": -34.5779355,
+    "lng": -58.4376942,
+    "approx": false,
+    "query": "Nicaragua 6045, Palermo Hollywood, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0045": {
+    "lat": -34.5730781,
+    "lng": -58.4594277,
+    "approx": false,
+    "query": "Avenida Elcano 3792, Colegiales, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0046": {
+    "lat": -34.5624143,
+    "lng": -58.4441367,
+    "approx": false,
+    "query": "Avenida Luis María Campos 1200–1500, Belgrano, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0047": {
+    "lat": -34.593908,
+    "lng": -58.4297161,
+    "approx": false,
+    "query": "Avenida Raúl Scalabrini Ortiz 1150, Palermo, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "V-0002": {
+    "lat": -34.5966441,
+    "lng": -58.4048883,
+    "approx": false,
+    "query": "Ecuador 1230, Recoleta, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "V-0003": {
+    "lat": -34.6011006,
+    "lng": -58.4124855,
+    "approx": false,
+    "query": "Gallo 1215, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "V-0004": {
+    "lat": -34.5532506,
+    "lng": -58.4489208,
+    "approx": false,
+    "query": "Blanco Encalada 1400, Belgrano, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0048": {
+    "lat": -34.5956612,
+    "lng": -58.4137332,
+    "approx": false,
+    "query": "Gorriti 3500, Recoleta, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0049": {
+    "lat": -34.5678982,
+    "lng": -58.4352363,
+    "approx": false,
+    "query": "Jorge Newbery 1764, Las Cañitas, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0050": {
+    "lat": -34.5657657,
+    "lng": -58.4652304,
+    "approx": false,
+    "query": "Freire 2200, Belgrano R, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "V-0005": {
+    "lat": -34.5840217,
+    "lng": -58.4329274,
+    "approx": false,
+    "query": "Costa Rica 5400, Palermo Hollywood, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0051": {
+    "lat": -34.5671846,
+    "lng": -58.4306943,
+    "approx": false,
+    "query": "Avenida del Libertador 5000, Las Cañitas, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0052": {
+    "lat": -34.5659902,
+    "lng": -58.446425,
+    "approx": false,
+    "query": "3 de Febrero 1400, Belgrano, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0053": {
+    "lat": -34.5784155,
+    "lng": -58.422949,
+    "approx": false,
+    "query": "Beruti 4449, Palermo, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0054": {
+    "lat": -34.5683392,
+    "lng": -58.4308427,
+    "approx": false,
+    "query": "Migueletes 1200, Las Cañitas, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "V-0006": {
+    "lat": -34.6156105,
+    "lng": -58.4785793,
+    "approx": false,
+    "query": "Remedios Escalada de San Martín 900, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "V-0007": {
+    "lat": -34.5945329,
+    "lng": -58.4015823,
+    "approx": false,
+    "query": "Avenida Santa Fe 2441, Recoleta, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "V-0008": {
+    "lat": null,
+    "lng": null,
+    "approx": true,
+    "query": null
+  },
+  "V-0009": {
+    "lat": -34.6213722,
+    "lng": -58.4236892,
+    "approx": false,
+    "query": "Avenida Independencia 4083, Boedo, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0055": {
+    "lat": null,
+    "lng": null,
+    "approx": true,
+    "query": null
+  },
+  "A-0056": {
+    "lat": -34.584121,
+    "lng": -58.434691,
+    "approx": false,
+    "query": "Humboldt 1800, Palermo Hollywood, Ciudad Autónoma de Buenos Aires, Argentina"
+  },
+  "A-0057": {
+    "lat": -34.5883382,
+    "lng": -58.4277019,
+    "approx": false,
+    "query": "Gurruchaga 2400, Palermo Soho, Ciudad Autónoma de Buenos Aires, Argentina"
+  }
+}
