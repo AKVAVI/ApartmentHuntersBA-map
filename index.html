@@ -34,6 +34,17 @@
       </div>
 
       <div class="filter-group">
+        <label class="filter-label" id="label-subbarrio">Подрайон</label>
+        <select id="filter-subbarrio">
+          <option value="" id="option-all-subbarrios">Все подрайоны</option>
+        </select>
+        <label class="checkbox-row">
+          <input type="checkbox" id="toggle-subbarrios" />
+          <span id="label-subbarrios-toggle">Показывать границы подрайонов</span>
+        </label>
+      </div>
+
+      <div class="filter-group">
         <label class="filter-label" id="label-price">Цена, USD</label>
         <div class="price-range">
           <input type="number" id="price-min" placeholder="от" min="0" />

@@ -59,6 +59,11 @@
       type: "Тип",
       district: "Район",
       allDistricts: "Все районы",
+      subBarrio: "Подрайон",
+      allSubBarrios: "Все подрайоны",
+      showSubBarrios: "Показывать границы подрайонов",
+      subBarrioLabel: "Подрайон:",
+      informalNote: "неофициальная граница, низкая точность",
       price: "Цена, USD",
       amenities: "Удобства",
       reset: "Сбросить фильтры",
@@ -80,6 +85,11 @@
       type: "Type",
       district: "Neighborhood",
       allDistricts: "All neighborhoods",
+      subBarrio: "Sub-neighborhood",
+      allSubBarrios: "All sub-neighborhoods",
+      showSubBarrios: "Show sub-neighborhood boundaries",
+      subBarrioLabel: "Sub-neighborhood:",
+      informalNote: "informal boundary, low accuracy",
       price: "Price, USD",
       amenities: "Amenities",
       reset: "Reset filters",
@@ -199,6 +209,9 @@
 
     parts.push('<p class="popup-title">' + escapeHtml(obj.address || obj.district) + "</p>");
     parts.push('<p class="popup-row" style="color:#767167">' + escapeHtml(obj.district) + "</p>");
+    if (obj.sub_barrios && obj.sub_barrios.length) {
+      parts.push('<p class="popup-row" style="color:#8e44ad">' + t.subBarrioLabel + " " + escapeHtml(obj.sub_barrios.join(", ")) + "</p>");
+    }
 
     var price = priceLine(obj, lang);
     if (price) parts.push('<p class="popup-price">' + escapeHtml(price) + "</p>");
@@ -263,6 +276,7 @@
     objects: [],
     activeTypes: new Set(),
     district: "",
+    subBarrio: "",
     priceMin: null,
     priceMax: null,
     activeAmenities: new Set(),
@@ -272,6 +286,8 @@
   var amenityChipEls = [];
 
   var map, markersLayer, barriosLayer, barriosByName = {}, layersControl;
+  var subbarriosLayer, subbarriosByName = {}, subbarriosVisible = false;
+  var SUBBARRIO_HIGHLIGHT_STYLE = { color: "#8e44ad", weight: 3, fillColor: "#d8b6e8", fillOpacity: 0.25, opacity: 0.9 };
   var baseLayers = {};
 
   var BASE_LAYER_LABELS = {
@@ -338,6 +354,50 @@
     return !!barrioName && barrioName.toLowerCase() === districtKey;
   }
 
+  function subbarrioStyle(feature) {
+    var base = feature.properties.boundary_type === "official_aph_hull"
+      ? { color: "#1a7a3c", dashArray: null }
+      : { color: "#8e44ad", dashArray: "6 4" };
+    return { color: base.color, weight: 2, fillOpacity: 0.06, opacity: 0.6, dashArray: base.dashArray };
+  }
+
+  function addSubbarrios(geojson) {
+    subbarriosLayer = L.geoJSON(geojson, {
+      style: subbarrioStyle,
+      onEachFeature: function (feature, layer) {
+        var p = feature.properties;
+        var label = p.name + (p.boundary_type === "informal" ? " — " + STRINGS[state.lang].informalNote : "");
+        layer.bindTooltip(label, { sticky: true });
+        subbarriosByName[p.name] = layer;
+      },
+    });
+    // Hidden by default (toggle controls visibility); not added to map yet.
+  }
+
+  function setSubbarriosVisible(visible) {
+    subbarriosVisible = visible;
+    if (!subbarriosLayer) return;
+    if (visible) {
+      subbarriosLayer.addTo(map);
+    } else {
+      map.removeLayer(subbarriosLayer);
+    }
+  }
+
+  function highlightSubbarrio(name) {
+    if (!subbarriosLayer) return;
+    subbarriosLayer.eachLayer(function (layer) {
+      layer.setStyle(subbarrioStyle(layer.feature));
+    });
+    if (!name) return;
+    var layer = subbarriosByName[name];
+    if (!layer) return;
+    if (!subbarriosVisible) setSubbarriosVisible(true);
+    layer.setStyle(SUBBARRIO_HIGHLIGHT_STYLE);
+    layer.bringToFront();
+    map.fitBounds(layer.getBounds(), { padding: [40, 40] });
+  }
+
   function highlightDistrict(districtKey) {
     barriosLayer.eachLayer(function (layer) {
       layer.setStyle(BARRIO_DEFAULT_STYLE);
@@ -372,6 +432,7 @@
       if (!matchesType) return false;
     }
     if (state.district && primaryDistrictKey(obj.district) !== state.district) return false;
+    if (state.subBarrio && (!obj.sub_barrios || obj.sub_barrios.indexOf(state.subBarrio) === -1)) return false;
     if (state.priceMin !== null && Number(obj.price) < state.priceMin) return false;
     if (state.priceMax !== null && Number(obj.price) > state.priceMax) return false;
     if (state.activeAmenities.size > 0) {
@@ -476,6 +537,37 @@
     });
   }
 
+  function buildSubbarrioSelect(subbarrioFeatures) {
+    var select = document.getElementById("filter-subbarrio");
+    var byParent = {};
+    subbarrioFeatures.forEach(function (f) {
+      var parent = f.properties.parent_barrio;
+      (byParent[parent] = byParent[parent] || []).push(f.properties.name);
+    });
+    Object.keys(byParent).sort().forEach(function (parent) {
+      var group = document.createElement("optgroup");
+      group.label = parent;
+      byParent[parent].sort().forEach(function (name) {
+        var opt = document.createElement("option");
+        opt.value = name;
+        opt.textContent = name;
+        group.appendChild(opt);
+      });
+      select.appendChild(group);
+    });
+    select.addEventListener("change", function () {
+      state.subBarrio = select.value;
+      highlightSubbarrio(state.subBarrio);
+      render();
+    });
+  }
+
+  function bindSubbarrioToggle() {
+    document.getElementById("toggle-subbarrios").addEventListener("change", function (e) {
+      setSubbarriosVisible(e.target.checked);
+    });
+  }
+
   function applyStaticText() {
     var t = STRINGS[state.lang];
     document.documentElement.lang = state.lang;
@@ -483,6 +575,9 @@
     document.getElementById("label-type").textContent = t.type;
     document.getElementById("label-district").textContent = t.district;
     document.getElementById("option-all-districts").textContent = t.allDistricts;
+    document.getElementById("label-subbarrio").textContent = t.subBarrio;
+    document.getElementById("option-all-subbarrios").textContent = t.allSubBarrios;
+    document.getElementById("label-subbarrios-toggle").textContent = t.showSubBarrios;
     document.getElementById("label-price").textContent = t.price;
     document.getElementById("label-amenities").textContent = t.amenities;
     document.getElementById("reset-filters").textContent = t.reset;
@@ -528,21 +623,24 @@
     document.getElementById("reset-filters").addEventListener("click", function () {
       state.activeTypes.clear();
       state.district = "";
+      state.subBarrio = "";
       state.priceMin = null;
       state.priceMax = null;
       state.activeAmenities.clear();
       document.querySelectorAll(".chip.active").forEach(function (c) { c.classList.remove("active"); });
       document.getElementById("filter-district").value = "";
+      document.getElementById("filter-subbarrio").value = "";
       document.getElementById("price-min").value = "";
       document.getElementById("price-max").value = "";
       highlightDistrict("");
+      highlightSubbarrio("");
       map.setView(CABA_CENTER, 13);
       render();
     });
   }
 
   function loadJson(url) {
-    return fetch(url).then(function (r) {
+    return fetch(url, { cache: "no-cache" }).then(function (r) {
       if (!r.ok) throw new Error("Failed to load " + url + ": " + r.status);
       return r.json();
     });
@@ -550,15 +648,19 @@
 
   function init() {
     initMap();
-    Promise.all([loadJson("data/objects.json"), loadJson("data/barrios.geojson")])
+    Promise.all([loadJson("data/objects.json"), loadJson("data/barrios.geojson"), loadJson("data/subbarrios.geojson")])
       .then(function (results) {
         var objects = results[0];
         var barrios = results[1];
+        var subbarrios = results[2];
         state.objects = objects;
         addBarrios(barrios);
+        addSubbarrios(subbarrios);
         buildTypeChips();
         buildAmenityChips();
         buildDistrictSelect(objects);
+        buildSubbarrioSelect(subbarrios.features);
+        bindSubbarrioToggle();
         bindPriceInputs();
         bindReset();
         bindLangSwitch();
