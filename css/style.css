@@ -186,6 +186,10 @@ select { width: 100%; }
   font-size: 13.5px;
   line-height: 1.45;
   min-width: 220px;
+  max-height: 60vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .popup-title {

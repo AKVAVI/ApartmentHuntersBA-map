@@ -329,17 +329,40 @@
     barriosLayer.bringToBack();
   }
 
+  // True only when districtKey IS the whole official barrio (e.g. "palermo",
+  // "belgrano") rather than one of its informal sub-neighborhoods (e.g.
+  // "palermo soho", "belgrano r", "barrio norte") — the city's open-data
+  // boundaries only cover whole barrios, not these colloquial subdivisions.
+  function isWholeBarrioKey(districtKey) {
+    var barrioName = DISTRICT_TO_BARRIO[districtKey];
+    return !!barrioName && barrioName.toLowerCase() === districtKey;
+  }
+
   function highlightDistrict(districtKey) {
     barriosLayer.eachLayer(function (layer) {
       layer.setStyle(BARRIO_DEFAULT_STYLE);
     });
     if (!districtKey) return;
-    var barrioName = DISTRICT_TO_BARRIO[districtKey];
-    var layer = barrioName && barriosByName[barrioName];
-    if (!layer) return;
-    layer.setStyle(BARRIO_HIGHLIGHT_STYLE);
-    layer.bringToFront();
-    map.fitBounds(layer.getBounds(), { padding: [40, 40] });
+
+    if (isWholeBarrioKey(districtKey)) {
+      var barrioName = DISTRICT_TO_BARRIO[districtKey];
+      var layer = barriosByName[barrioName];
+      if (layer) {
+        layer.setStyle(BARRIO_HIGHLIGHT_STYLE);
+        layer.bringToFront();
+        map.fitBounds(layer.getBounds(), { padding: [40, 40] });
+        return;
+      }
+    }
+
+    // Sub-neighborhood with no official boundary of its own: zoom to its
+    // actual listings instead of highlighting the whole parent barrio.
+    var points = state.objects
+      .filter(function (o) { return primaryDistrictKey(o.district) === districtKey && o.lat !== null && o.lng !== null; })
+      .map(function (o) { return [o.lat, o.lng]; });
+    if (points.length) {
+      map.fitBounds(L.latLngBounds(points), { padding: [60, 60], maxZoom: 16 });
+    }
   }
 
   function matchesFilters(obj) {
