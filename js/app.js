@@ -78,6 +78,10 @@
       perMonth: "/мес",
       priceFrom: "от",
       priceTo: "до",
+      mapLayers: "Карта",
+      showSubte: "Показать метро (Subte)",
+      rulerOn: "Линейка: кликайте по карте",
+      rulerOff: "Линейка: измерить расстояние",
     },
     en: {
       subtitle: "Buenos Aires listings map",
@@ -103,6 +107,10 @@
       perMonth: "/mo",
       priceFrom: "min",
       priceTo: "max",
+      mapLayers: "Map",
+      showSubte: "Show subway (Subte)",
+      rulerOn: "Ruler: click the map to measure",
+      rulerOff: "Ruler: measure distance",
     },
   };
 
@@ -144,19 +152,16 @@
     return d;
   }
 
-  function barrioFor(district) {
-    return DISTRICT_TO_BARRIO[primaryDistrictKey(district)] || null;
-  }
-
-  // These four now have their own dedicated "Подрайон" filter, so showing
-  // them again in the main "Район" list would just duplicate that choice.
-  // The main list collapses them into their parent barrio; the sub-barrio
-  // filter is still the only way to narrow to one of them specifically.
-  var SUBBARRIO_FILTER_KEYS = ["palermo chico", "palermo soho", "palermo hollywood", "las cañitas"];
-
+  // The main "Район" filter only ever shows official barrios (see
+  // buildDistrictSelect) — any informal sub-name (Palermo Soho, Belgrano R,
+  // Barrio Norte, ...) collapses into its real parent barrio here via
+  // DISTRICT_TO_BARRIO, the same table used for the barrio-boundary
+  // highlight. The dedicated "Подрайон" filter is the only place those
+  // four sub-names are still individually selectable.
   function districtFilterKey(district) {
     var key = primaryDistrictKey(district);
-    return SUBBARRIO_FILTER_KEYS.indexOf(key) === -1 ? key : "palermo";
+    var mapped = DISTRICT_TO_BARRIO[key];
+    return mapped ? mapped.toLowerCase() : key;
   }
 
   function formatUsd(amount, isRent, lang) {
@@ -349,18 +354,10 @@
       onEachFeature: function (feature, layer) {
         layer.bindTooltip(feature.properties.nombre, { sticky: true });
         barriosByName[feature.properties.nombre] = layer;
+        barriosByName[feature.properties.nombre.toLowerCase()] = layer;
       },
     }).addTo(map);
     barriosLayer.bringToBack();
-  }
-
-  // True only when districtKey IS the whole official barrio (e.g. "palermo",
-  // "belgrano") rather than one of its informal sub-neighborhoods (e.g.
-  // "palermo soho", "belgrano r", "barrio norte") — the city's open-data
-  // boundaries only cover whole barrios, not these colloquial subdivisions.
-  function isWholeBarrioKey(districtKey) {
-    var barrioName = DISTRICT_TO_BARRIO[districtKey];
-    return !!barrioName && barrioName.toLowerCase() === districtKey;
   }
 
   function subbarrioStyle(feature) {
@@ -406,31 +403,123 @@
     map.fitBounds(layer.getBounds(), { padding: [40, 40] });
   }
 
+  var subteLayer = null;
+
+  function addSubte(geojson) {
+    subteLayer = L.geoJSON(geojson, {
+      style: function (feature) {
+        return { color: feature.properties.color, weight: 4, opacity: 0.85 };
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, {
+          radius: 4,
+          color: "#fff",
+          weight: 1,
+          fillColor: feature.properties.color,
+          fillOpacity: 1,
+        });
+      },
+      onEachFeature: function (feature, layer) {
+        if (feature.properties.kind === "station") {
+          layer.bindTooltip(feature.properties.name + " (" + feature.properties.linea + ")", { sticky: true });
+        }
+      },
+    });
+    // Not added to the map here — the checkbox controls visibility.
+  }
+
+  function bindSubteToggle() {
+    document.getElementById("toggle-subte").addEventListener("change", function (e) {
+      if (!subteLayer) return;
+      if (e.target.checked) {
+        subteLayer.addTo(map);
+      } else {
+        map.removeLayer(subteLayer);
+      }
+    });
+  }
+
+  // ---- Ruler: click points on the map to measure distance ----
+  var rulerActive = false;
+  var rulerPoints = [];
+  var rulerLine = null;
+  var rulerDots = L.layerGroup();
+
+  function formatDistance(meters) {
+    if (meters < 1000) return Math.round(meters) + " " + (state.lang === "en" ? "m" : "м");
+    return (meters / 1000).toFixed(2) + " " + (state.lang === "en" ? "km" : "км");
+  }
+
+  function rulerTotalMeters() {
+    var total = 0;
+    for (var i = 1; i < rulerPoints.length; i++) {
+      total += rulerPoints[i - 1].distanceTo(rulerPoints[i]);
+    }
+    return total;
+  }
+
+  function redrawRuler() {
+    if (rulerLine) map.removeLayer(rulerLine);
+    rulerDots.clearLayers();
+    if (rulerPoints.length < 1) return;
+    if (rulerPoints.length >= 2) {
+      rulerLine = L.polyline(rulerPoints, { color: "#c0392b", weight: 3, dashArray: "8 6" }).addTo(map);
+    }
+    rulerPoints.forEach(function (pt, i) {
+      var dot = L.circleMarker(pt, { radius: 4, color: "#fff", weight: 1, fillColor: "#c0392b", fillOpacity: 1 }).addTo(rulerDots);
+      if (i === rulerPoints.length - 1 && rulerPoints.length >= 2) {
+        dot.bindTooltip(formatDistance(rulerTotalMeters()), { permanent: true, direction: "right", className: "ruler-tooltip" }).openTooltip();
+      }
+    });
+  }
+
+  function onRulerMapClick(e) {
+    rulerPoints.push(e.latlng);
+    redrawRuler();
+  }
+
+  function setRulerActive(active) {
+    rulerActive = active;
+    var btn = document.getElementById("toggle-ruler");
+    btn.classList.toggle("active", active);
+    btn.textContent = active ? STRINGS[state.lang].rulerOn : STRINGS[state.lang].rulerOff;
+    if (active) {
+      rulerPoints = [];
+      redrawRuler();
+      rulerDots.addTo(map);
+      map.doubleClickZoom.disable();
+      map.on("click", onRulerMapClick);
+      map.getContainer().style.cursor = "crosshair";
+    } else {
+      map.off("click", onRulerMapClick);
+      map.doubleClickZoom.enable();
+      map.getContainer().style.cursor = "";
+      if (rulerLine) { map.removeLayer(rulerLine); rulerLine = null; }
+      rulerDots.clearLayers();
+      map.removeLayer(rulerDots);
+      rulerPoints = [];
+    }
+  }
+
+  function bindRuler() {
+    document.getElementById("toggle-ruler").addEventListener("click", function () {
+      setRulerActive(!rulerActive);
+    });
+  }
+
+  // state.district is always one of the 48 official barrio keys now (the
+  // "Район" select no longer offers informal sub-names), so this always
+  // highlights a real boundary from data/barrios.geojson.
   function highlightDistrict(districtKey) {
     barriosLayer.eachLayer(function (layer) {
       layer.setStyle(BARRIO_DEFAULT_STYLE);
     });
     if (!districtKey) return;
-
-    if (isWholeBarrioKey(districtKey)) {
-      var barrioName = DISTRICT_TO_BARRIO[districtKey];
-      var layer = barriosByName[barrioName];
-      if (layer) {
-        layer.setStyle(BARRIO_HIGHLIGHT_STYLE);
-        layer.bringToFront();
-        map.fitBounds(layer.getBounds(), { padding: [40, 40] });
-        return;
-      }
-    }
-
-    // Sub-neighborhood with no official boundary of its own: zoom to its
-    // actual listings instead of highlighting the whole parent barrio.
-    var points = state.objects
-      .filter(function (o) { return primaryDistrictKey(o.district) === districtKey && o.lat !== null && o.lng !== null; })
-      .map(function (o) { return [o.lat, o.lng]; });
-    if (points.length) {
-      map.fitBounds(L.latLngBounds(points), { padding: [60, 60], maxZoom: 16 });
-    }
+    var layer = barriosByName[districtKey];
+    if (!layer) return;
+    layer.setStyle(BARRIO_HIGHLIGHT_STYLE);
+    layer.bringToFront();
+    map.fitBounds(layer.getBounds(), { padding: [40, 40] });
   }
 
   function matchesFilters(obj) {
@@ -517,25 +606,18 @@
     });
   }
 
-  function buildDistrictSelect(objects) {
+  // Official barrio names only — every one of the 48, taken straight from
+  // the city's own boundaries dataset (data/barrios.geojson), not derived
+  // from which districts happen to have listings right now. That's also
+  // where districtFilterKey's collapsing of informal sub-names lands, so a
+  // barrio with zero current listings (e.g. Almagro) still shows up here.
+  function buildDistrictSelect(barriosGeojson) {
     var select = document.getElementById("filter-district");
-    var seen = {};
-    var options = [];
-    objects.forEach(function (o) {
-      var key = districtFilterKey(o.district);
-      if (key && !seen[key]) {
-        seen[key] = true;
-        options.push(key);
-      }
-    });
-    options.sort();
-    options.forEach(function (key) {
+    var names = barriosGeojson.features.map(function (f) { return f.properties.nombre; }).sort();
+    names.forEach(function (name) {
       var opt = document.createElement("option");
-      opt.value = key;
-      opt.textContent = key
-        .split(" ")
-        .map(function (word) { return word.charAt(0).toUpperCase() + word.slice(1); })
-        .join(" ");
+      opt.value = name.toLowerCase();
+      opt.textContent = name;
       select.appendChild(opt);
     });
     select.addEventListener("change", function () {
@@ -587,6 +669,9 @@
     document.getElementById("footer-link").textContent = t.footer;
     document.getElementById("price-min").placeholder = t.priceFrom;
     document.getElementById("price-max").placeholder = t.priceTo;
+    document.getElementById("label-maplayers").textContent = t.mapLayers;
+    document.getElementById("label-toggle-subte").textContent = t.showSubte;
+    document.getElementById("toggle-ruler").textContent = rulerActive ? t.rulerOn : t.rulerOff;
 
     typeChipEls.forEach(function (c) { c.el.textContent = TYPE_LABELS[state.lang][c.type]; });
     amenityChipEls.forEach(function (c) { c.el.textContent = c.def.label[state.lang]; });
@@ -649,21 +734,25 @@
 
   function init() {
     initMap();
-    Promise.all([loadJson("data/objects.json"), loadJson("data/barrios.geojson"), loadJson("data/subbarrios.geojson")])
+    Promise.all([loadJson("data/objects.json"), loadJson("data/barrios.geojson"), loadJson("data/subbarrios.geojson"), loadJson("data/subte.geojson")])
       .then(function (results) {
         var objects = results[0];
         var barrios = results[1];
         var subbarrios = results[2];
+        var subte = results[3];
         state.objects = objects;
         addBarrios(barrios);
         addSubbarrios(subbarrios);
+        addSubte(subte);
         buildTypeChips();
         buildAmenityChips();
-        buildDistrictSelect(objects);
+        buildDistrictSelect(barrios);
         buildSubbarrioSelect(subbarrios.features);
         bindPriceInputs();
         bindReset();
         bindLangSwitch();
+        bindSubteToggle();
+        bindRuler();
         applyStaticText();
         document.getElementById("total-count").textContent = objects.length;
         render();

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EstateArg — карта объектов (Буэнос-Айрес)</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<link rel="stylesheet" href="css/style.css?v=4" />
+<link rel="stylesheet" href="css/style.css?v=5" />
 </head>
 <body>
   <div id="app">
@@ -55,6 +55,15 @@
       </div>
 
       <div class="filter-group">
+        <label class="filter-label" id="label-maplayers">Карта</label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="toggle-subte" />
+          <span id="label-toggle-subte">Показать метро (Subte)</span>
+        </label>
+        <button type="button" id="toggle-ruler" class="btn-reset">Линейка: измерить расстояние</button>
+      </div>
+
+      <div class="filter-group">
         <button id="reset-filters" class="btn-reset">Сбросить фильтры</button>
       </div>
 
@@ -71,6 +80,6 @@
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="js/app.js?v=4"></script>
+  <script src="js/app.js?v=5"></script>
 </body>
 </html>
