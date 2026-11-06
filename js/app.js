@@ -209,8 +209,8 @@
 
     parts.push('<p class="popup-title">' + escapeHtml(obj.address || obj.district) + "</p>");
     parts.push('<p class="popup-row" style="color:#767167">' + escapeHtml(obj.district) + "</p>");
-    if (obj.sub_barrios && obj.sub_barrios.length) {
-      parts.push('<p class="popup-row" style="color:#8e44ad">' + t.subBarrioLabel + " " + escapeHtml(obj.sub_barrios.join(", ")) + "</p>");
+    if (obj.sub_barrio) {
+      parts.push('<p class="popup-row" style="color:#8e44ad">' + t.subBarrioLabel + " " + escapeHtml(obj.sub_barrio) + "</p>");
     }
 
     var price = priceLine(obj, lang);
@@ -378,12 +378,24 @@
     subbarriosVisible = visible;
     if (!subbarriosLayer) return;
     if (visible) {
-      subbarriosLayer.addTo(map);
-    } else {
+      if (!map.hasLayer(subbarriosLayer)) subbarriosLayer.addTo(map);
+      // Re-apply the highlight (if any) now that the layer is actually drawn.
+      subbarriosLayer.eachLayer(function (layer) {
+        layer.setStyle(
+          layer.feature.properties.name === state.subBarrio
+            ? SUBBARRIO_HIGHLIGHT_STYLE
+            : subbarrioStyle(layer.feature)
+        );
+      });
+    } else if (map.hasLayer(subbarriosLayer)) {
       map.removeLayer(subbarriosLayer);
     }
   }
 
+  // Selecting a sub-barrio always filters markers and zooms the map to its
+  // extent (getBounds() works on a Leaflet layer whether or not it is on
+  // the map). It never changes layer visibility itself — the checkbox is
+  // the single source of truth for whether any boundary is drawn.
   function highlightSubbarrio(name) {
     if (!subbarriosLayer) return;
     subbarriosLayer.eachLayer(function (layer) {
@@ -392,9 +404,10 @@
     if (!name) return;
     var layer = subbarriosByName[name];
     if (!layer) return;
-    if (!subbarriosVisible) setSubbarriosVisible(true);
-    layer.setStyle(SUBBARRIO_HIGHLIGHT_STYLE);
-    layer.bringToFront();
+    if (subbarriosVisible) {
+      layer.setStyle(SUBBARRIO_HIGHLIGHT_STYLE);
+      layer.bringToFront();
+    }
     map.fitBounds(layer.getBounds(), { padding: [40, 40] });
   }
 
@@ -432,7 +445,7 @@
       if (!matchesType) return false;
     }
     if (state.district && primaryDistrictKey(obj.district) !== state.district) return false;
-    if (state.subBarrio && (!obj.sub_barrios || obj.sub_barrios.indexOf(state.subBarrio) === -1)) return false;
+    if (state.subBarrio && obj.sub_barrio !== state.subBarrio) return false;
     if (state.priceMin !== null && Number(obj.price) < state.priceMin) return false;
     if (state.priceMax !== null && Number(obj.price) > state.priceMax) return false;
     if (state.activeAmenities.size > 0) {

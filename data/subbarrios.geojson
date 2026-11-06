@@ -7,143 +7,41 @@
         "id": "palermo_chico",
         "name": "Palermo Chico",
         "parent_barrio": "Palermo",
-        "boundary_type": "official_aph_hull",
-        "source": "GCBA, dataset \"Áreas de Protección Histórica\" (data.buenosaires.gob.ar/dataset/areas-proteccion-historica), APH3 \"Ámbito Gran Bourg y Palermo Chico\" (Ley 536/2000, vigente en el Código Urbanístico, Ley 6099)",
-        "methodology": "Convex hull of the 442 cataloged parcels tagged APH3 in the official per-parcel GeoJSON. This is a derived approximation of the legally protected area, not the exact polygon from the Código Urbanístico's plan annex (published only as a PDF plan, not open geodata).",
-        "confidence": "high",
-        "version": "1.0"
+        "boundary_type": "informal_google",
+        "source": "Google Maps neighborhood boundary for \"Palermo Chico\" (viewed 2026-11-06), traced against real street/rail geometry",
+        "methodology": "Google Maps draws an actual polygon for this one place (unlike the other three): Av. Casares / FC San Martín rail / Austria / Av. del Libertador. Austria does not reach the railway near here (their real crossing is several blocks south, near Canal Siete), so the NE corner is not a street×street intersection: it is Austria's own northernmost mapped point (a real OSM coordinate, ~70m from where the rail passes closest to it) rather than an invented one. The other three corners are real intersections: Av. Casares × FC San Martín rail (NW), Av. Casares × Av. del Libertador (SW), Austria × Av. del Libertador (SE).",
+        "boundary_streets": [
+          "Avenida Casares",
+          "FC San Martín railway",
+          "Austria",
+          "Avenida Del Libertador"
+        ],
+        "confidence": "medium",
+        "version": "2.0"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              -58.410897634969665,
-              -34.58517185729061
+              -58.408526916670745,
+              -34.569029809759314
             ],
             [
-              -58.41082256140543,
-              -34.58522491029328
+              -58.3959934,
+              -34.5816794
             ],
             [
-              -58.397828591778385,
-              -34.58148522834687
+              -58.3972936,
+              -34.5830867
             ],
             [
-              -58.39604477679406,
-              -34.57892822563964
+              -58.4099666,
+              -34.5772311
             ],
             [
-              -58.3979436017029,
-              -34.577575388631296
-            ],
-            [
-              -58.40216661245149,
-              -34.57483155505137
-            ],
-            [
-              -58.4024378199271,
-              -34.575126743961555
-            ],
-            [
-              -58.403003381765856,
-              -34.5757423183599
-            ],
-            [
-              -58.410897634969665,
-              -34.58517185729061
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "belgrano_r",
-        "name": "Belgrano R",
-        "parent_barrio": "Belgrano",
-        "boundary_type": "official_aph_hull",
-        "source": "GCBA, dataset \"Áreas de Protección Histórica\", APH4 \"Entorno Estación Belgrano R\"",
-        "methodology": "Convex hull of the 50 cataloged parcels tagged APH4 in the official per-parcel GeoJSON. Same caveat as Palermo Chico: a derived approximation, not the exact legal polygon. Note this APH covers only the area immediately around Belgrano R train station, which is smaller than the colloquial real-estate \"Belgrano R\" neighborhood.",
-        "confidence": "high",
-        "version": "1.0"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -58.465370724339486,
-              -34.568073451037066
-            ],
-            [
-              -58.465077291191676,
-              -34.568418334132076
-            ],
-            [
-              -58.46505193479721,
-              -34.56844767607732
-            ],
-            [
-              -58.46495619708492,
-              -34.56855844525252
-            ],
-            [
-              -58.4649492886172,
-              -34.56856643202448
-            ],
-            [
-              -58.46491170609072,
-              -34.56860976431368
-            ],
-            [
-              -58.46489733340638,
-              -34.568626332803944
-            ],
-            [
-              -58.464113355851595,
-              -34.568982128662576
-            ],
-            [
-              -58.462262002442884,
-              -34.569417453208196
-            ],
-            [
-              -58.461406661411324,
-              -34.56915259886565
-            ],
-            [
-              -58.46047467057925,
-              -34.56868865696836
-            ],
-            [
-              -58.46036990879983,
-              -34.568620146551936
-            ],
-            [
-              -58.46102362973591,
-              -34.56753579442785
-            ],
-            [
-              -58.46108685461699,
-              -34.5674632754535
-            ],
-            [
-              -58.46181525965914,
-              -34.56687488521851
-            ],
-            [
-              -58.46523695944328,
-              -34.56718155469672
-            ],
-            [
-              -58.46524412966624,
-              -34.56718585435593
-            ],
-            [
-              -58.465370724339486,
-              -34.568073451037066
+              -58.408526916670745,
+              -34.569029809759314
             ]
           ]
         ]
@@ -156,84 +54,40 @@
         "name": "Palermo Soho",
         "parent_barrio": "Palermo",
         "boundary_type": "informal",
-        "source": "Billiken (\"¿Sabías que hay diecinueve sub-barrios no oficiales dentro de Palermo?\", billiken.lat): \"queda al sur de la Avenida Juan B. Justo\"; cross-checked against Mudafy.com.ar, which bounds it by Av. Scalabrini Ortiz, Av. Córdoba, Av. Juan B. Justo and Av. Santa Fe.",
-        "methodology": "No official boundary exists for this name. Polygon built by pulling the real OpenStreetMap line geometry of each boundary street named by the source, keeping only the points within ~1-1.4km of this sub-barrio's own listings' centroid (or a manual estimate where no listings exist yet), and taking the convex hull of the pooled points. This hugs the named streets without depending on exact street-to-street intersections (most of these avenues don't literally cross near the area, or OSM splits them into many short way segments).",
+        "source": "Mudafy.com.ar / roomix.ai real-estate guides: \"entre las avenidas Scalabrini Ortiz, Córdoba, Juan B. Justo y Santa Fe\"",
+        "methodology": "Quadrilateral from the real intersections of these four streets: Av. Juan B. Justo (shared edge with Palermo Hollywood to its north) and Av. Scalabrini Ortiz as the cross sides; Av. Santa Fe and Av. Córdoba as the long sides.",
         "boundary_streets": [
-          "Avenida Raúl Scalabrini Ortiz",
-          "Avenida Córdoba",
+          "Avenida Santa Fe",
           "Avenida Juan Bautista Justo",
-          "Avenida Santa Fe"
+          "Avenida Córdoba",
+          "Avenida Raúl Scalabrini Ortiz"
         ],
         "confidence": "low",
-        "version": "1.0"
+        "version": "2.0"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              -58.4401508,
-              -34.5875851
+              -58.4266383,
+              -34.5781581
             ],
             [
-              -58.4391881,
-              -34.5909806
+              -58.4382065,
+              -34.5888802
             ],
             [
-              -58.4391104,
-              -34.5910857
+              -58.4300771,
+              -34.5942936
             ],
             [
-              -58.4322883,
-              -34.5957182
+              -58.4159562,
+              -34.5851498
             ],
             [
-              -58.4281105,
-              -34.5955112
-            ],
-            [
-              -58.4187778,
-              -34.5869099
-            ],
-            [
-              -58.420633,
-              -34.5819644
-            ],
-            [
-              -58.4208256,
-              -34.5817753
-            ],
-            [
-              -58.4222299,
-              -34.5804205
-            ],
-            [
-              -58.4222606,
-              -34.5803969
-            ],
-            [
-              -58.4224577,
-              -34.580265
-            ],
-            [
-              -58.4232918,
-              -34.5797279
-            ],
-            [
-              -58.4235179,
-              -34.5795913
-            ],
-            [
-              -58.425266,
-              -34.5788146
-            ],
-            [
-              -58.4268365,
-              -34.5785065
-            ],
-            [
-              -58.4401508,
-              -34.5875851
+              -58.4266383,
+              -34.5781581
             ]
           ]
         ]
@@ -246,212 +100,40 @@
         "name": "Palermo Hollywood",
         "parent_barrio": "Palermo",
         "boundary_type": "informal",
-        "source": "Billiken: \"queda al norte de la Avenida Juan B. Justo\"; cross-checked against a second real-estate guide bounding it by Av. Juan B. Justo, Av. Córdoba/Costa Rica/Honduras, Av. Dorrego and Av. Santa Fe.",
-        "methodology": "No official boundary exists for this name. Polygon built by pulling the real OpenStreetMap line geometry of each boundary street named by the source, keeping only the points within ~1-1.4km of this sub-barrio's own listings' centroid (or a manual estimate where no listings exist yet), and taking the convex hull of the pooled points. This hugs the named streets without depending on exact street-to-street intersections (most of these avenues don't literally cross near the area, or OSM splits them into many short way segments).",
+        "source": "roomix.ai / Billiken: \"entre Juan B. Justo, Córdoba, Dorrego y Santa Fe\"",
+        "methodology": "Quadrilateral from the real intersections of these four streets: Av. Juan B. Justo (shared edge with Palermo Soho to its south) and Av. Dorrego as the cross sides; Av. Santa Fe and Av. Córdoba as the long sides.",
         "boundary_streets": [
+          "Avenida Santa Fe",
           "Avenida Juan Bautista Justo",
           "Avenida Córdoba",
-          "Avenida Dorrego",
-          "Avenida Santa Fe"
+          "Avenida Dorrego"
         ],
         "confidence": "low",
-        "version": "1.0"
+        "version": "2.0"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              -58.4447566,
-              -34.5844078
+              -58.4266383,
+              -34.5781581
             ],
             [
-              -58.4445782,
-              -34.5846628
+              -58.4383253,
+              -34.5888031
             ],
             [
-              -58.4434834,
-              -34.5853988
-            ],
-            [
-              -58.4424338,
-              -34.5861024
-            ],
-            [
-              -58.441867,
-              -34.5864713
-            ],
-            [
-              -58.4416586,
-              -34.5866069
-            ],
-            [
-              -58.4378997,
-              -34.587689
-            ],
-            [
-              -58.4377832,
-              -34.5876963
-            ],
-            [
-              -58.425442,
-              -34.57867
-            ],
-            [
-              -58.4286987,
-              -34.5734858
-            ],
-            [
-              -58.4338698,
-              -34.5741904
-            ],
-            [
-              -58.4339512,
-              -34.574208
-            ],
-            [
-              -58.4340355,
-              -34.5742425
-            ],
-            [
-              -58.435419,
-              -34.5749445
-            ],
-            [
-              -58.4354943,
-              -34.5749868
+              -58.4447876,
+              -34.5845224
             ],
             [
               -58.4355647,
               -34.5750345
             ],
             [
-              -58.4365824,
-              -34.575824
-            ],
-            [
-              -58.4444177,
-              -34.5831795
-            ],
-            [
-              -58.4447566,
-              -34.5844078
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "palermo_viejo",
-        "name": "Palermo Viejo",
-        "parent_barrio": "Palermo",
-        "boundary_type": "informal",
-        "source": "Billiken: \"entre las avenidas Córdoba y Santa Fe, desde Dorrego hasta Scalabrini Ortiz.\" NOTE: English Wikipedia gives a different, non-overlapping box (Coronel Díaz / Córdoba / Scalabrini Ortiz / Güemes) for the same name — per user decision, the Billiken definition was used.",
-        "methodology": "No official boundary exists for this name. Polygon built by pulling the real OpenStreetMap line geometry of each boundary street named by the source, keeping only the points within ~1-1.4km of this sub-barrio's own listings' centroid (or a manual estimate where no listings exist yet), and taking the convex hull of the pooled points. This hugs the named streets without depending on exact street-to-street intersections (most of these avenues don't literally cross near the area, or OSM splits them into many short way segments).",
-        "boundary_streets": [
-          "Avenida Córdoba",
-          "Avenida Santa Fe",
-          "Avenida Dorrego",
-          "Avenida Raúl Scalabrini Ortiz"
-        ],
-        "confidence": "low",
-        "version": "1.0"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -58.4434834,
-              -34.5853988
-            ],
-            [
-              -58.4389472,
-              -34.599985
-            ],
-            [
-              -58.4233804,
-              -34.5977585
-            ],
-            [
-              -58.4232357,
-              -34.5977364
-            ],
-            [
-              -58.420337,
-              -34.5878914
-            ],
-            [
-              -58.4434834,
-              -34.5853988
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "palermo_nuevo",
-        "name": "Palermo Nuevo",
-        "parent_barrio": "Palermo",
-        "boundary_type": "informal",
-        "source": "Billiken: \"ubicado entre las calles Santa Fe, Sarmiento, Del Libertador y el ex-ferrocarril San Martín.\"",
-        "methodology": "No official boundary exists for this name. Polygon built by pulling the real OpenStreetMap line geometry of each boundary street named by the source, keeping only the points within ~1-1.4km of this sub-barrio's own listings' centroid (or a manual estimate where no listings exist yet), and taking the convex hull of the pooled points. This hugs the named streets without depending on exact street-to-street intersections (most of these avenues don't literally cross near the area, or OSM splits them into many short way segments).",
-        "boundary_streets": [
-          "Avenida Santa Fe",
-          "Sarmiento",
-          "Avenida Del Libertador",
-          "Avenida Cabildo"
-        ],
-        "confidence": "low",
-        "version": "1.0"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -58.4259977,
-              -34.5781717
-            ],
-            [
-              -58.4259405,
-              -34.5783427
-            ],
-            [
-              -58.425266,
-              -34.5788146
-            ],
-            [
-              -58.4077719,
-              -34.591038
-            ],
-            [
-              -58.3992292,
-              -34.5827742
-            ],
-            [
-              -58.407077,
-              -34.5785965
-            ],
-            [
-              -58.4079983,
-              -34.5781162
-            ],
-            [
-              -58.4148195,
-              -34.5746089
-            ],
-            [
-              -58.4218431,
-              -34.5715887
-            ],
-            [
-              -58.4259977,
-              -34.5781717
+              -58.4266383,
+              -34.5781581
             ]
           ]
         ]
@@ -464,184 +146,40 @@
         "name": "Las Cañitas",
         "parent_barrio": "Palermo",
         "boundary_type": "informal",
-        "source": "Billiken: \"entre la avenida Luis María Campos, Matienzo, Del Libertador y Dorrego.\"",
-        "methodology": "No official boundary exists for this name. Polygon built by pulling the real OpenStreetMap line geometry of each boundary street named by the source, keeping only the points within ~1-1.4km of this sub-barrio's own listings' centroid (or a manual estimate where no listings exist yet), and taking the convex hull of the pooled points. This hugs the named streets without depending on exact street-to-street intersections (most of these avenues don't literally cross near the area, or OSM splits them into many short way segments).",
+        "source": "roomix.ai: \"delimitado por las avenidas Luis María Campos, Dorrego y Del Libertador y la calle Matienzo\"",
+        "methodology": "Quadrilateral from the real intersections of these four streets: Av. del Libertador and Av. Luis María Campos as the long (roughly parallel) sides; Matienzo and Av. Dorrego as the cross sides.",
         "boundary_streets": [
-          "Avenida Luis María Campos",
-          "Matienzo",
           "Avenida Del Libertador",
+          "Teniente Benjamín Matienzo",
+          "Avenida Luis María Campos",
           "Avenida Dorrego"
         ],
         "confidence": "low",
-        "version": "1.0"
+        "version": "2.0"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              -58.4412485,
-              -34.5645993
+              -58.4322595,
+              -34.5661661
             ],
             [
-              -58.4406037,
-              -34.5721387
+              -58.435741,
+              -34.5702284
             ],
             [
-              -58.4365824,
-              -34.575824
+              -58.4319992,
+              -34.5741326
             ],
             [
-              -58.4282667,
-              -34.5774093
+              -58.4241413,
+              -34.5709816
             ],
             [
-              -58.4223975,
-              -34.5713243
-            ],
-            [
-              -58.4219605,
-              -34.5687778
-            ],
-            [
-              -58.4374195,
-              -34.5631634
-            ],
-            [
-              -58.4377968,
-              -34.5630308
-            ],
-            [
-              -58.4393784,
-              -34.5625532
-            ],
-            [
-              -58.4395837,
-              -34.5625079
-            ],
-            [
-              -58.4412485,
-              -34.5645993
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "belgrano_c",
-        "name": "Belgrano C",
-        "parent_barrio": "Belgrano",
-        "boundary_type": "informal",
-        "source": "Roomix.ai neighborhood guide (qualitative only: \"torres de departamentos sobre Avenida Cabildo y la Plaza Manuel Belgrano\") combined with a real-estate market report bounding a Belgrano commercial zone by Av. Cabildo, Olazábal, Congreso and Conesa. Weakest-sourced polygon in this set.",
-        "methodology": "No official boundary exists for this name. Polygon built by pulling the real OpenStreetMap line geometry of each boundary street named by the source, keeping only the points within ~1-1.4km of this sub-barrio's own listings' centroid (or a manual estimate where no listings exist yet), and taking the convex hull of the pooled points. This hugs the named streets without depending on exact street-to-street intersections (most of these avenues don't literally cross near the area, or OSM splits them into many short way segments).",
-        "boundary_streets": [
-          "Avenida Cabildo",
-          "Olazábal",
-          "Congreso",
-          "Conesa"
-        ],
-        "confidence": "low",
-        "version": "1.0"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -58.4636746,
-              -34.5545322
-            ],
-            [
-              -58.4583331,
-              -34.5602646
-            ],
-            [
-              -58.4573414,
-              -34.5611244
-            ],
-            [
-              -58.4471346,
-              -34.5535238
-            ],
-            [
-              -58.4530185,
-              -34.5504899
-            ],
-            [
-              -58.4635285,
-              -34.554339
-            ],
-            [
-              -58.4636746,
-              -34.5545322
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "bajo_belgrano",
-        "name": "Bajo Belgrano",
-        "parent_barrio": "Belgrano",
-        "boundary_type": "informal",
-        "source": "wander-argentina.com tourist guide: \"bounded by Avenida Cabildo to the north, Río de la Plata to the east, Avenida del Libertador to the south, and Avenida Libertador General San Martín to the west\" (also calls it \"Belgrano Chico\"). Internally a little inconsistent (two Libertador references) — used Av. Cabildo, Av. del Libertador, Av. Monroe and Av. Leopoldo Lugones as the four nearest named streets.",
-        "methodology": "No official boundary exists for this name. Polygon built by pulling the real OpenStreetMap line geometry of each boundary street named by the source, keeping only the points within ~1-1.4km of this sub-barrio's own listings' centroid (or a manual estimate where no listings exist yet), and taking the convex hull of the pooled points. This hugs the named streets without depending on exact street-to-street intersections (most of these avenues don't literally cross near the area, or OSM splits them into many short way segments).",
-        "boundary_streets": [
-          "Avenida Cabildo",
-          "Avenida Del Libertador",
-          "Avenida Monroe",
-          "Avenida Leopoldo Lugones"
-        ],
-        "confidence": "low",
-        "version": "1.0"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -58.4554887,
-              -34.5482474
-            ],
-            [
-              -58.45542,
-              -34.5483793
-            ],
-            [
-              -58.4451171,
-              -34.5598914
-            ],
-            [
-              -58.4448932,
-              -34.5597279
-            ],
-            [
-              -58.4536199,
-              -34.5497842
-            ],
-            [
-              -58.4542716,
-              -34.549191
-            ],
-            [
-              -58.4546309,
-              -34.5488726
-            ],
-            [
-              -58.4547054,
-              -34.5488093
-            ],
-            [
-              -58.4553287,
-              -34.5483369
-            ],
-            [
-              -58.4554887,
-              -34.5482474
+              -58.4322595,
+              -34.5661661
             ]
           ]
         ]

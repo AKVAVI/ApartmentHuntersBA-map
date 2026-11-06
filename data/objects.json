@@ -34,11 +34,8 @@
     "description_en": "Furnished studio apartment in Villa Crespo. The building has a pool and a rooftop terrace with barbecue grills. Ideal for professional use. Available from December 5, 2026. USD 550/month + ARS 224,000 expensas and utilities; alternative: USD 700/month with expensas, ABL and AYSA (water) included.",
     "other_amenities_en": "Rooftop terrace (azotea).",
     "contract_term_en": "Long term",
-    "sub_barrios": [
-      "Palermo Viejo"
-    ],
-    "sub_barrio": "Palermo Viejo",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0002",
@@ -75,7 +72,6 @@
     "description_en": "Furnished loft in Recoleta (French 2900). Short-term rental, fully equipped, with washing machine. Available from December 15 (year not specified). USD 700/month all-inclusive, with caps on utility usage. No data on surface area, exact floor, number of bathrooms, or building amenities.",
     "other_amenities_en": "",
     "contract_term_en": "Short/mid-term",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -114,7 +110,6 @@
     "description_en": "Furnished apartment (1 bedroom, 1 bathroom), 55 m², in the Torre Quo building, on the border between Palermo Hollywood and Belgrano (near Av. Cabildo, the subway and bus lines). Kitchen integrated with the living/dining room, with a balcony. In the apartment: TV, wifi, bed linens and towels, Nespresso coffee machine, toaster, electric kettle, refrigerator, electric oven, dishware, heating/AC, washer-dryer, digital lock. Building amenities: heated semi-Olympic pool, outdoor pool, 500 m² gym, coworking space, yoga/meditation room, massage room, rooftop terrace/solarium, barbecue grills, 24-hour security. Price $1,700/month, all-inclusive; parking separate — USD 120/month. The photos (13) show 1 bedroom (photographed from two angles, one with the mirrored closet door) and 1 bathroom (sink/bidet area and bathtub/shower area in the same room) — matching the source description. No data: exact street number, floor, availability date, lease term, deposit, pets.",
     "other_amenities_en": "In the apartment: TV, wifi, bed linens and towels, Nespresso coffee machine, toaster, electric kettle, refrigerator, electric oven, dishware, digital lock, balcony. In the building: heated semi-Olympic pool, outdoor pool, 500 m² gym, coworking space, yoga/meditation room, massage room, rooftop terrace/solarium, 24/7 security.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -153,7 +148,6 @@
     "description_en": "Furnished apartment (1 bedroom, 1 bathroom), 55 m², in the Torre Quo building, on the border between Palermo Hollywood and Belgrano. Kitchen integrated with the living/dining room, with a balcony. In the apartment: TV, wifi, bed linens and towels, Nespresso coffee machine, toaster, electric kettle, refrigerator, electric oven, dishware, heating/AC, washer-dryer, digital lock. Building amenities: heated semi-Olympic pool, outdoor pool, 500 m² gym, coworking space, yoga/meditation room, massage room, rooftop terrace/solarium, barbecue grills, 24-hour security. Price $1,750/month, all-inclusive; parking separate — USD 120/month. The photos (11, after removing user 1 from the original 12) show 1 bedroom and 1 bathroom — matching the source description. No data: exact street number, floor, availability date, lease term, deposit, pets.",
     "other_amenities_en": "In the apartment: TV, wifi, bed linens and towels, Nespresso coffee machine, toaster, electric kettle, refrigerator, electric oven, dishware, digital lock, balcony. In the building: heated semi-Olympic pool, outdoor pool, 500 m² gym, coworking space, yoga/meditation room, massage room, rooftop terrace/solarium, 24/7 security.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -192,12 +186,8 @@
     "description_en": "Furnished studio apartment in Palermo Soho, Av. Córdoba 5161, eighth floor with a street view, very bright. Queen bed plus a separate sofa bed, TV, air conditioning, fully equipped kitchen (refrigerator, electric kettle, toaster, dishware), sheets and towels included. Total surface area 48 m² (30 m² covered), 1 bathroom. Expensas of ARS 82,000/month. Price USD 650/month; does not include expensas, electricity, ABL (property tax), or internet. Minimum lease term of 6 months, with adjustment every 2 months according to the CPI (IPC). A property guarantee and proof of income are required.",
     "other_amenities_en": "8th floor, street view, very bright apartment. Queen-size bed plus a separate sofa bed. TV, air conditioning, fully equipped kitchen (refrigerator, kettle, toaster, dishware). Bed linens and towels included. Total area 48 m², of which 30 m² is covered.",
     "contract_term_en": "Minimum 6 months",
-    "sub_barrios": [
-      "Palermo Soho",
-      "Palermo Viejo"
-    ],
     "sub_barrio": "Palermo Soho",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0006",
@@ -234,7 +224,6 @@
     "description_en": "Furnished 2-bedroom apartment (one with a double bed, the other with a single bed) at Teodoro García 2361, Palermo, Buenos Aires. Large terrace-balcony, laundry area, full bathroom plus a guest toilet. A few steps from the subway and the Metrobus. Available from December 2026 (exact date not specified). Price USD 1,200/month + ARS 230,000 in building expensas. A deposit of 2 months' rent is required. No data: surface area, floor, exact apartment number, lease term, pets, building amenities.",
     "other_amenities_en": "2 bedrooms (one with a double bed, the other with a single bed), spacious terrace-balcony, laundry area (lavadero with washing machine), full bathroom plus a separate guest toilet (aseo de invitados). Near the subway and the Metrobus.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -273,11 +262,8 @@
     "description_en": "Brand-new studio apartment, fully furnished and equipped, in Palermo Hollywood, Bonpland 2200. Front balcony with a view of the street/city, custom-designed furniture. In the apartment: wifi, cable TV, 50-inch Samsung Smart TV, air conditioning, Whirlpool refrigerator with freezer, good-quality mattress, microwave, electric oven, electric kettle, coffee maker, toaster, fully equipped kitchen (dishware and cutlery). Building amenities: elevator, laundry, solarium, barbecue area, security totem, electronic code access, brand-new building. Location: right in Palermo Hollywood, 2 blocks from Av. Santa Fe, 4 blocks from Ministro Carranza station (train and subway) and 3 blocks from Av. Juan B. Justo. Price: USD 850/month (rent) + approximately USD 200/month in expensas and utilities = package price USD 1,050/month (estimated by the source, not a guaranteed fixed amount). The photos (10 selected) confirm 1 bathroom — not mentioned in the source text but visible in the photos. No data: surface area, exact move-in date, lease term, deposit, pets, pool/gym in the building, coordinates.",
     "other_amenities_en": "In the apartment: wifi, cable TV, 50-inch Samsung Smart TV, air conditioning, Whirlpool refrigerator with freezer, quality mattress, microwave, electric oven, electric kettle, coffee maker, toaster, fully equipped kitchen (dishware, cutlery). In the building: elevator, laundry room, solarium, barbecue area, security post (security totem), electronic lock with access code, new building.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Hollywood"
-    ],
     "sub_barrio": "Palermo Hollywood",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0008",
@@ -314,12 +300,8 @@
     "description_en": "Spacious, fully furnished studio apartment with a partition, in Palermo, Scalabrini Ortiz 1492. The space is divided into a sleeping area and a living area by a wooden-slat divider, keeping an open layout. Full bathroom with bathtub, washing machine inside the unit (built into the kitchen), ample storage space. Ideal for mid- to long-term stays. Modern building with 24-hour security. Building amenities: pool, solarium, gym, SUM (multipurpose room), laundry (shared laundry room with several machines). Location: right in the heart of Palermo, steps from cafés, restaurants, parks, supermarkets, boutiques, and excellent public transport. Price: USD 1,000/month + expensas ARS 320,000/month; electricity and gas separate. The source states availability 'from August 15' without a year — as of 11/02/2026 that date has already passed, which looks like outdated information; it is advisable to confirm actual availability separately. The photos (19 downloaded, 10 selected) confirm the wooden-slat partition and the washing machine built into the apartment's kitchen — there is also a shared building laundry room with several machines as an additional amenity, which does not contradict the source text. No data: surface area, floor, apartment number, lease term, deposit, pets, heating, coordinates.",
     "other_amenities_en": "In the apartment: zoned into a sleeping area and a living area (wooden-slat partition), fully furnished, bathroom with bathtub, washing machine inside the apartment (built into the kitchen), spacious storage closets, bright and functional layout. In the building: pool, solarium, gym, SUM (multipurpose room), separate laundry room (several washers/dryers), 24/7 security.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Soho",
-      "Palermo Viejo"
-    ],
     "sub_barrio": "Palermo Soho",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0009",
@@ -356,11 +338,8 @@
     "description_en": "Spacious, fully furnished studio apartment with a partition and high-quality finishes in Palermo, Costa Rica 5530. Bright, modern, and move-in ready. Balcony with plenty of natural light, air conditioning, 40\" TV, washing machine, everything brand new. Rooftop: pool, barbecue area, gym. 24-hour security. Prime Palermo location surrounded by cafés, restaurants, shops, green spaces, and excellent transport access. Price: USD 1,300/month + expensas ARS 189,000/month. Available now. No data: surface area, floor, apartment number, lease term, deposit, pets, utilities (separate or included?).",
     "other_amenities_en": "Balcony with good natural light. Air conditioning. Washing machine. Fully furnished. Completely new apartment. 40\" TV. On the rooftop: pool, barbecue area (parrilla), gym. 24/7 security.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Hollywood"
-    ],
     "sub_barrio": "Palermo Hollywood",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0010",
@@ -397,11 +376,8 @@
     "description_en": "Spacious 52 m² studio apartment in Palermo Soho, Fray Justo María de Oro 2100. Steps from Plaza Armenia and Plaza Serrano. Fully furnished: full kitchen with a bar, dining/desk table, sofa bed, queen bed, large closet, bathroom with bathtub, balcony, plenty of natural light. Building amenities: gym, pool, security. Price: USD 890/month, all-inclusive (expensas and utilities). ATTENTION: the DEPTOS DISPONIBLES spreadsheet listed USD 850; the current price on the website is USD 890 — the website price was used. Availability date on the website: 'June 12' with no year given — as of 11/03/2026 that date has already passed; actual availability should be confirmed. No data: floor, apartment number, lease term, deposit, pets, heating, parking, coordinates.",
     "other_amenities_en": "Full kitchen with a bar. Dining table or home-office area. Sofa bed. Queen-size bed. Spacious closet. Bathroom with bathtub. Balcony. Plenty of natural light. Gym, pool, security in the building.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Soho"
-    ],
     "sub_barrio": "Palermo Soho",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0011",
@@ -438,11 +414,8 @@
     "description_en": "Studio apartment on the border between Palermo and Recoleta, at the corner of Austria and Av. Las Heras, across from the Biblioteca Nacional. Fully furnished, move-in ready. King-size bed, balcony with a street view, full bathroom with bathtub, ample storage space. Building amenities: rooftop pool, sauna, gym, basement laundry room, 24-hour security. Pets accepted upon request. Price: USD 800/month, all expenses included except electricity. The source has conflicting availability information (both November and August) — this should be confirmed separately. No data: surface area, floor, lease term, deposit, coordinates.",
     "other_amenities_en": "Sauna, 24/7 security, basement laundry room, rooftop terrace with loungers.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Hollywood"
-    ],
     "sub_barrio": "Palermo Hollywood",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0012",
@@ -479,11 +452,8 @@
     "description_en": "Studio apartment with a partition on the 3rd floor, front-facing, in the La Algodonera building, on the border between Palermo and Colegiales. Modern design with separate living and sleeping areas, keeping an open, spacious feel. Fully furnished and equipped, move-in ready. Building amenities: outdoor pool, fully equipped gym, large landscaped garden, café, SUM (multipurpose room), 24-hour security. Price: USD 1,300/month, expensas included, electricity separate. Available now. No data: surface area, lease term, deposit, pets, coordinates.",
     "other_amenities_en": "Large landscaped garden, café, common events room (SUM), 24/7 security.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Las Cañitas"
-    ],
-    "sub_barrio": "Las Cañitas",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0013",
@@ -520,7 +490,6 @@
     "description_en": "Brand-new 1-bedroom apartment, 60 m² (all covered), facing Plaza Vicente López, Recoleta. Interior unit, modern, fully furnished and equipped. Spacious living room, bedroom with a good closet, full bathroom. Kitchen: microwave, dishwasher, washer and dryer. AC and heating. Safe included. Suitable for professional/commercial use. Amenities: 24-hour security, shared laundry room, elevator, optional covered parking. Short-term or long-term rental. Price: USD 1,200/month + expensas approx. ARS 300,000 + utilities. No data: floor, lease term, deposit, coordinates.",
     "other_amenities_en": "24/7 security, elevator, professional use allowed, 10 floors with 5 apartments each.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -559,12 +528,8 @@
     "description_en": "Bright 1-bedroom apartment, 2nd floor, front-facing, north orientation, Serrano 1335, Palermo Viejo, 3 blocks from Plaza Serrano. 48 m² (45 covered + 3 semi-covered). Bedroom with queen bed, living room with sofa bed, TV, air conditioning. Kitchen equipped with refrigerator, electric kettle, toaster, dishware, washing machine. Suitable for professional use, move-in ready. Price: USD 800/month + expensas ARS 172,000; utilities separate, Wi-Fi included. Minimum one-year lease, adjusted every 2 months according to the CPI (IPC). No data: deposit, pets, building amenities (pool/gym), coordinates.",
     "other_amenities_en": "Accessible entrance for people with reduced mobility. Boutique building (3 floors, 6 apartments per floor), building age ≈10 years.",
     "contract_term_en": "Long term",
-    "sub_barrios": [
-      "Palermo Soho",
-      "Palermo Viejo"
-    ],
     "sub_barrio": "Palermo Soho",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0015",
@@ -601,7 +566,6 @@
     "description_en": "Modern 2-room apartment on the 3rd floor of the exclusive Pont Bleu Tower, Honduras 4154, Palermo. Quiet, with a view of the complex's gardens. 50 m² (40 covered + 11 balcony). Spacious living room, AC, large private balcony. Integrated kitchen with an oven and electric cooktop, granite countertops. 1 en-suite bedroom with a mirrored closet, guest toilet. Parking space included. Furnished (unfurnished option available). Pets allowed. Amenities: 2 outdoor pools, solarium, gym, sauna, cinema, SUM, coworking space, game room, 24-hour security. Price: USD 1,000/month + expensas ARS 475,000. Available now. No data: lease term, deposit, coordinates.",
     "other_amenities_en": "2 outdoor pools, solarium, sauna, cinema room, SUM, coworking space, game room, multi-sport court, guest parking, reception, elevators.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -640,11 +604,8 @@
     "description_en": "Modern 2-room apartment (1 bedroom, 1 bathroom + toilet), fully furnished and equipped, in BE Plaza, Av. Dorrego, on the border between Palermo Hollywood and Las Cañitas. Very bright, with open views from the rooftop, sofa bed, pet- and child-friendly. Premium amenities: rooftop infinity pool, coworking space, outdoor lounge, solarium, sauna, gym, 24-hour security. Price: USD 1,300/month, all expenses included except electricity and WiFi. Available from December 2026 (exact date not given), viewings possible before then. No data: surface area, floor, lease term, deposit, coordinates.",
     "other_amenities_en": "Coworking space, outdoor lounge, solarium, sauna, rooftop infinity pool.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Las Cañitas"
-    ],
-    "sub_barrio": "Las Cañitas",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0017",
@@ -681,11 +642,8 @@
     "description_en": "Duplex (2 rooms) with two balconies, recently renovated, Cabrera 3900, Palermo Hollywood. Fully furnished and equipped: sofa bed, TV, outdoor furniture, queen bed. Full bathroom with bathtub. Kitchen with washing machine and complete equipment. Ample storage space. Amenities: outdoor pool, parking available. Price: USD 1,300/month, all-inclusive except electricity (website price; DEPTOS listed USD 1,200). ATTENTION: in DEPTOS the status is 'Reserved' — it may not be available; confirm before publishing. No data: surface area, floor, lease term, deposit, pets, coordinates.",
     "other_amenities_en": "Parking space available.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Hollywood"
-    ],
     "sub_barrio": "Palermo Hollywood",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0018",
@@ -722,7 +680,6 @@
     "description_en": "Fully furnished 2-bedroom apartment (3 rooms), 114 m², half-floor unit, front-facing, north orientation, Av. Pres. Manuel Quintana 556, Recoleta (near Plaza Francia and the Basílica del Pilar). Private balcony overlooking the avenue. Spacious living and dining rooms, equipped kitchen, separate laundry area, maid's room. Built-in closets, AC, heating/boiler, natural gas, internet, cable TV, elevator. Move-in ready. ATTENTION: available ONLY from August 2026 to May 2027 — this is not a long-term rental. Pets not allowed. Price: USD 1,500/month + expensas ARS 413,000. No data: building pool/gym, deposit, coordinates.",
     "other_amenities_en": "Separate laundry area in the apartment (washing-machine hookup available, the machine itself is not confirmed), maid's room, built-in closets, air conditioning, boiler, natural gas, high-speed internet, cable TV, elevator.",
     "contract_term_en": "Available only from 08.2026 to 05.2027",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -761,12 +718,8 @@
     "description_en": "Unfurnished 2-bedroom apartment (3 rooms) on the 10th floor, Av. Córdoba 5443 (corner of Humboldt), Palermo Hollywood. 96 m² (70 covered). 2 full bathrooms with bathtubs, marble-look finishes. Bright. Large L-shaped terrace-balcony with panoramic views. Open kitchen with a ceramic cooktop. Laundry closet with space for a washing machine and dishwasher (appliances not included). En-suite master bedroom. Built-in closets. 3 split air-conditioning units, radiant floor heating. Pets allowed. Amenities: pool, solarium, barbecue grills, SUM, gym, basement laundry room, 24-hour security, package reception. Optional uncovered parking space at an additional cost. Price: USD 1,400/month + expensas ARS 560,000. No data: lease term, deposit, availability date, coordinates.",
     "other_amenities_en": "Solarium, SUM, 24/7 security, package reception.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Soho",
-      "Palermo Viejo"
-    ],
-    "sub_barrio": "Palermo Soho",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "Palermo Hollywood",
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0020",
@@ -803,7 +756,6 @@
     "description_en": "Fully renovated and spacious apartment (3 rooms), 80 m², 8th floor, Vicente López 1900, Recoleta (one block from Recoleta Mall). High ceilings, plenty of natural light. Washing machine included. Fully equipped kitchen. Move-in ready. Price: USD 1,300/month (expensas included, utilities separate). ATTENTION: significant discrepancy with the DEPTOS DISPONIBLES spreadsheet in price (1,400 vs 1,300) and availability date (05/01/2027 vs 08/28, probably 2026) — not automatically resolved; confirm with the agency. No data: bathrooms, pool/gym, lease term, deposit, pets, coordinates.",
     "other_amenities_en": "High ceilings, plenty of natural light.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -842,12 +794,8 @@
     "description_en": "Amazing, elegant, and very bright furnished duplex apartment located in the iconic 'Silos de Dorrego' complex, surrounded by green spaces in the heart of the city. Fully remodeled 4 years ago, in excellent condition. 3rd floor, unique loft-style design on two levels. 78 m² total (74 m² covered + 4 m² balcony). Available from August 1. Fully furnished and equipped: 2 loft-style bedrooms (one with a queen bed, the other with two bunk-style beds), integrated living/dining room, and a complete kitchen. Balcony with its own private barbecue grill. Includes 1 private parking space. Amenities: pool and sauna, garden and large green areas, paddle-tennis court, fully equipped gym, SUM, on-site café/bistro, visitor parking, and 24/7 security. Price: USD 2,000/month, expensas ≈ARS 600,000. Utilities paid separately. No data: exact number of bathrooms, lease term, deposit, pets, coordinates.",
     "other_amenities_en": "Garden and large green areas, paddle-tennis court, SUM, on-site café/bistro, guest parking, 24/7 security.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Hollywood",
-      "Las Cañitas"
-    ],
-    "sub_barrio": "Palermo Hollywood",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0022",
@@ -884,11 +832,8 @@
     "description_en": "ATTENTION: data taken ONLY from the DEPTOS DISPONIBLES spreadsheet — the listing is not available on the website (404 error when checked on 11/03/2026), possibly already rented. Furnished 3-room apartment, Sánchez de Bustamante 2200, Recoleta. Amenities per DEPTOS: sauna, barbecue grills. Price: USD 1,400/month, expensas included. Available from December 2026, viewings can be arranged before then. No photos collected. Current availability must be confirmed with the agency before any publication.",
     "other_amenities_en": "Sauna (per the DEPTOS DISPONIBLES spreadsheet).",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Nuevo"
-    ],
-    "sub_barrio": "Palermo Nuevo",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0023",
@@ -925,12 +870,8 @@
     "description_en": "ATTENTION: the apartment is RENTED UNTIL FEBRUARY (per DEPTOS DISPONIBLES) — it would be available approximately from March 2027. The listing was also removed from the website (404 error when checked on 11/03/2026), which is consistent with the 'rented' status. Furnished 3-room apartment, Humboldt 1945, Palermo Hollywood. Amenities per DEPTOS: 24/7 security, gym, pool, solarium, sauna. Price: USD 2,150/month, expensas included. No photos collected. Confirm the exact availability date with the agency before publishing.",
     "other_amenities_en": "24/7 security, solarium, sauna (per DEPTOS).",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Hollywood",
-      "Palermo Soho"
-    ],
     "sub_barrio": "Palermo Hollywood",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0024",
@@ -967,11 +908,8 @@
     "description_en": "Spacious 4-room apartment with a maid's room, ideal for families or anyone looking for comfort and generous space. Large living/dining room, excellent layout, and abundant natural light throughout the day. 4 bedrooms (one en-suite with a private balcony), maid's room, 2 full bathrooms, and 1 guest toilet. Large, fully equipped kitchen with an independent laundry area. Long continuous balcony and ample storage space. 160 m² covered + 17 m² uncovered. Sánchez de Bustamante 2100, Barrio Norte — one of the city's most sought-after areas, with excellent connectivity and close to shops, restaurants, and a wide range of services. Amenities: fixed parking space included. Price: USD 3,100/month, all-inclusive except electricity and gas (paid separately). No data: building pool/gym, lease term, deposit, pets, availability date, coordinates.",
     "other_amenities_en": "Fixed parking space included. Separate laundry area in the apartment (not to be confused with a shared building laundry room — none is mentioned for the building).",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Nuevo"
-    ],
-    "sub_barrio": "Palermo Nuevo",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0025",
@@ -1008,7 +946,6 @@
     "description_en": "Fully furnished and equipped apartment (SMALL variant), 1 bedroom, 1 bathroom, kitchen integrated with the living/dining room. Large balcony. This is one of the size variants of the units in Torre QUO, Zapata 359, on the border of Palermo Hollywood and Belgrano, near Av. Cabildo, the subway, and bus lines. ATTENTION: the detailed description block on this specific page has a website technical error — it shows the text for a different size variant (MEDIUM, 55 m², USD 1,750) instead of its own. The SMALL price and size are confirmed by the page title and by the DEPTOS DISPONIBLES spreadsheet: USD 1,600/month, all-inclusive. Parking separate, USD 120/month. Fully furnished: TV, WiFi, appliances, washer-dryer, digital lock. Amenities: pools (including a heated one), 500 m² gym, coworking space, yoga/meditation, massages, terrace, solarium, barbecue grills, 24/7 security. No data: exact surface area, floor, lease term, deposit, pets, coordinates.",
     "other_amenities_en": "Fully furnished and equipped: TV, Wi-Fi, towels, bed linens, Nespresso coffee machine, toaster, electric kettle, refrigerator, electric oven, dishware, washer-dryer (counted as washing_machine=yes). Digital lock for self check-in. In the building (Torre QUO): heated semi-Olympic pool, outdoor pool, 500 m² gym, coworking space, yoga and meditation room, massage room, rooftop terrace, solarium, barbecue areas, 24/7 security.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1047,7 +984,6 @@
     "description_en": "Fully furnished and equipped apartment (BIG variant — the largest among the building's units), 1 bedroom, 1 bathroom. The master bedroom has a queen bed, en-suite bathroom, and walk-in closet. Kitchen integrated with the living/dining room. Large balcony. Torre QUO, Zapata 359, on the border of Palermo Hollywood and Belgrano, near Av. Cabildo, the subway, and bus lines. Fully furnished: TV, WiFi, appliances, washer-dryer, digital lock. Amenities: pools (including a heated one), 500 m² gym, coworking space, yoga/meditation, massages, terrace, solarium, barbecue grills, 24/7 security. Price: USD 2,000/month, all-inclusive. Parking separate, USD 120/month. No data: exact surface area, floor, lease term, deposit, pets, coordinates.",
     "other_amenities_en": "Fully furnished and equipped: TV, Wi-Fi, towels, bed linens, Nespresso coffee machine, toaster, electric kettle, refrigerator, electric oven, dishware, washer-dryer. Digital lock. In the building (Torre QUO): heated semi-Olympic pool, outdoor pool, 500 m² gym, coworking space, yoga/meditation, massages, rooftop terrace, solarium, barbecue areas, 24/7 security.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1086,11 +1022,8 @@
     "description_en": "Beautiful and cozy studio apartment in one of the coolest and most sought-after neighborhoods of Buenos Aires (Las Cañitas). The apartment is very functional and comfortable, making it an excellent option for both short and medium-term stays. The area combines quiet and convenience: a short distance from a shopping mall and close to the Bosques de Palermo (ideal for walking, exercising, or walking pets). Excellent access to public transport (buses, trains, subway nearby, taxis on Luis María Campos and Av. del Libertador). Ideal for working from home thanks to its quiet surroundings. Amenities: pool, rooftop jacuzzi, gym, sauna, 24-hour security, parking available if needed. Price: USD 900/month, expensas included. Available from October 7, 2026. ATTENTION: this listing appears duplicated in DEPTOS DISPONIBLES (08/24 and 09/30) — merged into a single row. No data: surface area, floor, lease term, deposit, pets, coordinates.",
     "other_amenities_en": "Rooftop jacuzzi, gym, sauna, 24/7 security.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Las Cañitas"
-    ],
     "sub_barrio": "Las Cañitas",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0028",
@@ -1127,7 +1060,6 @@
     "description_en": "Bright and comfortable furnished 1-bedroom apartment (2 rooms) in the heart of Palermo, Güemes 3800 (corner of Aráoz), 2 blocks from Av. Santa Fe and Scalabrini Ortiz, 5 blocks from Alto Palermo Shopping, and 4 blocks from the Jardín Botánico. 38 m² (36 m² covered). Facing two streets, excellent natural light. Corner building (Güemes/Aráoz), 7 floors, 4 apartments per floor, 35 years old. Living room with parquet flooring, TV, radio, dining/work table, 3 chairs. Fully equipped kitchen, independent laundry area. Balcony with morning and afternoon sun. Bedroom with a new bed, 2 nightstands, large built-in closet. Bathroom with bathtub. Price: USD 800/month (expensas included), utilities separate. Available from September 10, 2026. Short-term rental. No data: building pool/gym, lease term, deposit, pets, coordinates.",
     "other_amenities_en": "",
     "contract_term_en": "Short/mid-term",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1166,11 +1098,8 @@
     "description_en": "Exclusive, fully furnished and equipped half-floor apartment in Belgrano, with a partial river view. Rear-facing, very bright. 11 de Septiembre de 1888 2600, a quiet residential area with excellent connectivity (train, subway, buses), close to movie theaters, parks, cafés, and restaurants. 92 m² (72 m² covered). 3 rooms: 2 bedrooms (one en-suite), 1 bathroom + 1 toilet. Fixed covered parking space. Bedrooms with built-in closets, living/dining room, fully equipped kitchen, laundry room. Solid wood flooring, new air conditioning units in every room, high-quality furniture. Fully equipped: linens, towels, appliances, washing machine, utensils, and dishware. Tower building, large unified terrace-balcony with open views from every room. 24-hour security. Price: USD 1,850/month + expensas ≈ARS 550,000/month + utilities. Parking included. No agency commission. Minimum lease term: 6 months. Available from September 15, 2026. No data: pool/gym, deposit, pets, coordinates.",
     "other_amenities_en": "24/7 security, tower building, open views, fixed covered parking space included.",
     "contract_term_en": "Minimum 6 months",
-    "sub_barrios": [
-      "Belgrano C"
-    ],
-    "sub_barrio": "Belgrano C",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0030",
@@ -1207,11 +1136,8 @@
     "description_en": "Spacious and very bright 2-bedroom apartment (3 rooms), front-facing, with an open green view and its own balcony, Guatemala 5700, Palermo Hollywood. Large living/dining room, fully equipped kitchen, washing machine. Home-office area. Very airy and full of natural light. Amenities: pool, barbecue grill. Conditions: short-term rental, minimum 6 months. No children, no pets. Price: USD 1,500/month + expensas ≈ARS 470,000 (electricity and gas not included). No data: surface area, floor, lease term, availability date, coordinates.",
     "other_amenities_en": "Bicycle parking (bicicletero, per DEPTOS).",
     "contract_term_en": "Short-term, minimum 6 months",
-    "sub_barrios": [
-      "Palermo Hollywood"
-    ],
     "sub_barrio": "Palermo Hollywood",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "V-0001",
@@ -1248,11 +1174,8 @@
     "description_en": "97 m² studio-style loft in the 'Concepción Live' residential complex, Concepción Arenal 2900, Palermo. Excellent-quality furniture, fully equipped, private balcony, very bright and airy interiors, modern and comfortable design. Available from December. Amenities: gym, spa, indoor/outdoor cinema, coworking space, restaurants and bars, walkways and parks, pool, meeting room, rehearsal room. TWO OPTIONS: for sale at USD 440,000 or for rent at USD 2,500/month. No data: bathrooms, floor, coordinates.",
     "other_amenities_en": "Spa, cinema (indoor/outdoor), coworking space, on-site restaurants and bars, walkways and parks, meeting room, rehearsal room.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Las Cañitas"
-    ],
-    "sub_barrio": "Las Cañitas",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0031",
@@ -1289,7 +1212,6 @@
     "description_en": "Bright 1-bedroom apartment (2 rooms) in a quiet residential area of Belgrano R, Doctor Pedro Ignacio Rivera 3000, excellent natural light, northeast orientation. 65 m² (54 m² covered). 1 bedroom with en-suite bathroom + 1 guest toilet. Spacious living/dining room, integrated kitchen. Roomy bedroom with a large closet. Long balcony connecting the living room and bedroom, with a safety net. Pets allowed. Amenities: pool, solarium, SUM, barbecue area, laundry room with a washing machine and fast dryer. Available from December 11, 2026. Price: USD 1,000/month + expensas ARS 190,000, utilities separate. No data: lease term, deposit, coordinates.",
     "other_amenities_en": "Solarium, SUM/multipurpose room.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1328,11 +1250,8 @@
     "description_en": "Beautiful, stylishly furnished 1-bedroom apartment (2 rooms), with a balcony overlooking a spectacular garden, Jorge Luis Borges 1965, Palermo Soho. 45 m² (40 m² covered). Very quiet, private, and extremely bright. Completely new, tastefully furnished. Double bed in the bedroom and a sofa bed in the living room (sleeps up to 3). Balcony with a private barbecue grill and garden view. Fully equipped kitchen, washing machine, new TV, 1000 Mbps WiFi. Professional use allowed. Amenities: pool, solarium, barbecue grills, rooftop terrace. Short-term rental. Available from January 2027. Price: USD 1,100/month + expensas ARS 180,000. No data: lease term, deposit, pets, coordinates.",
     "other_amenities_en": "Solarium, rooftop terrace.",
     "contract_term_en": "Short/mid-term",
-    "sub_barrios": [
-      "Palermo Soho"
-    ],
     "sub_barrio": "Palermo Soho",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0033",
@@ -1369,7 +1288,6 @@
     "description_en": "Spacious and cozy 60 m² duplex spread over two floors, Céspedes 3249, Colegiales. Upper floor: bedroom with a king-size bed and en-suite bathroom. Ground floor: living/dining room with an integrated kitchen. Suitable for up to 3 people. Amenities: pool, solarium, barbecue grill, laundry room, gym, 24-hour security. Price: USD 1,450/month, expensas included in the price. Electricity paid separately by the tenant. No data: floor, lease term, deposit, pets, availability date, coordinates.",
     "other_amenities_en": "Solarium, 24/7 security.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1408,7 +1326,6 @@
     "description_en": "Apartment in a classic vintage-style building, Ayacucho (between Juncal and Pacheco de Melo), Recoleta. 3rd floor, half-floor unit with a shared landing. Rear-facing, quiet, with good natural light. 106 m². Two very spacious bedrooms. Large living/dining room. Separate kitchen. Everyday dining area. Independent laundry room. One full bathroom and one toilet. High ceilings that enhance the sense of spaciousness. Fully renovated, with new flooring and a remodeled bathroom. Available from September 22, 2026. Price: USD 2,100/month, all-inclusive (expensas and utilities). No data: lease term, deposit, pets, coordinates.",
     "other_amenities_en": "",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1447,7 +1364,6 @@
     "description_en": "Immaculate and spacious furnished 3-room apartment with plenty of storage space, French 2727, Recoleta. Master bedroom with a queen bed, second bedroom with a single bed and a desk. Bright rooms with a balcony. Fully equipped kitchen, washing machine in the unit. Available from October 17, 2026. Price: USD 1,500/month + expensas ≈USD 100. No data: floor, lease term, deposit, pets, coordinates.",
     "other_amenities_en": "",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1486,9 +1402,8 @@
     "description_en": "Bright studio apartment with a partition on the 5th floor, Palermo Chico, fully furnished and equipped. Design with a separate sleeping area. New hot/cold air conditioning. Very bright, park view. Jerónimo Salguero 2533, 300 meters from Av. del Libertador, a few blocks from the Rosedal, the Jardín Japonés, the Planetario, MALBA, La Rural, the Ecoparque, the Hipódromo de Palermo, Shopping Alcorta, and Alto Palermo. A safe and quiet area, surrounded by excellent restaurants and cafés. Price: USD 1,000/month, all-inclusive package price. No data: surface area, lease term, deposit, pets, availability date, coordinates.",
     "other_amenities_en": "",
     "contract_term_en": "",
-    "sub_barrios": [],
-    "sub_barrio": "",
-    "sub_barrio_boundary_version": ""
+    "sub_barrio": "Palermo Chico",
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0037",
@@ -1525,7 +1440,6 @@
     "description_en": "Beautiful, fully renovated and furnished 3-bedroom PH (row house) on two floors, 100 m² (80 m² covered), with a private patio, Blanco Encalada 1322, Bajo Belgrano. Combines the comfort and privacy of a house with the charm of a quiet PH. Spacious living room overlooking the patio, new fully equipped kitchen, independent laundry room. 3 bedrooms, 1 full bathroom, and 1 toilet. Mid-century-inspired designer furniture, high-quality finishes. Lot shared by only 2 units, independent entrance. 100% electric. No expensas: ABL, water, and electricity included in the final price of USD 2,850/month. Short-term rental, minimum stay of 6 months. No data: deposit, pets, availability date, coordinates.",
     "other_amenities_en": "",
     "contract_term_en": "Short-term, minimum 6 months",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1564,7 +1478,6 @@
     "description_en": "2-room apartment with 1 bedroom and 1 bathroom, Migueletes 700, Belgrano. Fully equipped, 50 m² total (43 m² covered). The building offers amenities (not specified which). Price: USD 1,200/month, expensas ARS 500,000 (as of August 2026). No data: floor, lease term, deposit, pets, availability date, coordinates.",
     "other_amenities_en": "",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1603,7 +1516,6 @@
     "description_en": "Bright 2-room penthouse-style apartment on the 9th floor, Av. Ruiz Huidobro 4666, Saavedra. 67 m² interior + a spectacular 35 m² private terrace with open views, north/northwest orientation. Double-glazed windows, excellent cross ventilation. Bedroom with a Queen Simmons bed. Terrace with a barbecue grill. Air conditioning in both rooms, 60\" LG TV, Pioneer speakers, WIZ Wi-Fi-controlled lighting, washing machine, refrigerator with freezer, electric oven and cooktop, kitchen bar with stools. Security cameras integrated with the electric door intercom and a mobile app. Fully electric apartment. Pets not allowed. Price: USD 1,150/month + expensas ≈USD 250–300 (per the source). Minimum stay: 3 months. No data: lease term, deposit, availability date, coordinates.",
     "other_amenities_en": "",
     "contract_term_en": "Minimum 3 months",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1642,11 +1554,8 @@
     "description_en": "Modern and bright 2-room apartment on the 5th floor, Cuba 2746, Belgrano, between Av. Congreso and Ugarte, two blocks from Subway Line D and Av. Cabildo. Rear-facing, with a balcony and excellent natural light. 1 bedroom with an en-suite bathroom, additional guest toilet. Open kitchen integrated with the living room. Fully furnished and equipped: dishware, linens, washing machine. Amenities: pool, gym, barbecue grill, SUM, building WiFi. Viewings by appointment. Available from October 25, 2026. Price: USD 850/month + expensas ARS 220,000 + electricity. No data: floor (already given above), lease term, deposit, pets, coordinates.",
     "other_amenities_en": "SUM/multipurpose room, Wi-Fi in the building.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Belgrano C"
-    ],
-    "sub_barrio": "Belgrano C",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0041",
@@ -1683,7 +1592,6 @@
     "description_en": "Immaculate 2-room apartment, Ramsay 1895, Belgrano Chico. 70 m² (60 m² covered). En-suite bedroom, additional guest bathroom. Spacious living/dining room, integrated kitchen, private patio, balcony. Fixed covered parking space, storage unit. Natural wood flooring, radiant floor heating, hot/cold split air conditioning in every room, built-in closets. Space for a washing machine and dishwasher. North orientation, excellent natural light. Amenities: 24-hour security, gym, yoga/pilates, rooftop pool, solarium, SUM, barbecue grill. Available from late September 2026. Price: USD 1,800/month + expensas ARS 600,000. No data: lease term, deposit, pets, coordinates.",
     "other_amenities_en": "Yoga/pilates room, 24/7 security, accessibility for people with reduced mobility.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1722,7 +1630,6 @@
     "description_en": "Fully renovated 2-bedroom apartment (3 rooms), 71 m², Sánchez de Bustamante 1300, Recoleta (near the border with Palermo). 2nd floor (stairs only) in a boutique building with just 5 units, offering privacy and low expensas. Living/dining room with access to a front balcony. Independent, fully equipped kitchen. Separate laundry room. Built-in closets. Gas heating and hot water. Fully renovated, new finishes. North orientation, bright. Pets allowed. Move-in ready. Amenities: shared rooftop terrace with a barbecue grill. Price: short-term package rental USD 1,300/month, electricity separate; long-term rental with expensas ARS 80,000/month. No data: lease term, deposit, availability date, coordinates.",
     "other_amenities_en": "Shared rooftop terrace, low maintenance costs (expensas).",
     "contract_term_en": "Short-term (package price) or long-term",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1761,11 +1668,8 @@
     "description_en": "Spacious and bright fully furnished 2-bedroom apartment (3 rooms) on the 17th floor, Av. Luis María Campos 250, Las Cañitas. Incredible open views from its private balcony. 83 m² (80 m² covered + 3 m² balcony). Spacious living/dining room with balcony access, fully equipped kitchen. En-suite master bedroom with a walk-in closet, second bedroom with its own full bathroom, additional guest toilet. Air conditioning and heating throughout the unit. Pets not allowed. Amenities: 24-hour security, 3 elevators, laundry room, internet, reception, built-in closets, study, maid's room, private parking space. Price: USD 1,700/month + expensas starting at ARS 500,000. No data: lease term, deposit, availability date, coordinates.",
     "other_amenities_en": "24/7 security, 3 elevators, reception, built-in closets, study/office area, maid's room, private parking.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Las Cañitas"
-    ],
-    "sub_barrio": "Las Cañitas",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0044",
@@ -1802,11 +1706,8 @@
     "description_en": "Premium furnished 3-room apartment on the 9th floor of the Live Hotel building, Nicaragua 6045, Palermo Hollywood. Spacious living/dining room, integrated kitchen, 2 bedrooms (master en-suite), 3 bathrooms. Large L-shaped balcony. 115 m² (90 m² covered + 24 m² balcony). Bright, fully equipped, radiant floor heating, split air conditioning in every room. Includes one parking space. Pets and professional use allowed. Amenities: 24-hour security, rooftop pool with solarium, children's pool, gym, sauna, SUM, barbecue grill, laundry room, rooftop garden, elevator, reception. Price: USD 3,000/month + expensas ≈ARS 1,141,000. No data: lease term, deposit, availability date, coordinates.",
     "other_amenities_en": "24/7 security, children's pool, sauna, SUM, rooftop garden, elevator, reception.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Hollywood"
-    ],
     "sub_barrio": "Palermo Hollywood",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0045",
@@ -1843,7 +1744,6 @@
     "description_en": "Bright and cozy loft in a completely new building, Avenida Elcano 3792, Colegiales (close to Palermo, Núñez, Belgrano R, and subway Line B stations). Double-height design, high wooden ceilings, abundant natural light. Open, modern design, spacious and comfortable atmosphere. 30 m², 1 bathroom. Completely new building. Price: USD 900/month, expensas included. No data: floor, lease term, deposit, pets, availability date, coordinates.",
     "other_amenities_en": "",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1882,7 +1782,6 @@
     "description_en": "Brand-new, fully furnished 1-bedroom apartment (2 rooms) in a recently completed building, Av. Luis María Campos 1200–1500, Belgrano (close to the Barrancas de Belgrano, the Universidad de Belgrano, the Palermo woods, and Barrio Chino). Bright living/dining room, fully equipped kitchen, 1 bathroom. 10.25 m² balcony overlooking Luis María Campos. 50.54 m² total (40.3 m² covered). All furniture and appliances are new, move-in ready. Amenities: pool, solarium, fully equipped gym, SUM, virtual security, facial-recognition access, elevator, fixed parking space, wheelchair-accessible entrance. Available from December 1, 2026. Price: USD 1,300/month + expensas ≈ARS 300,000 + utilities (electricity, wifi). No data: lease term, deposit, pets, coordinates.",
     "other_amenities_en": "Solarium, virtual security, facial-recognition access system, security totem, elevator, fixed parking space, wheelchair entrance.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -1921,12 +1820,8 @@
     "description_en": "Modern and spacious furnished 1-bedroom apartment (2 rooms) on the 6th floor, Av. Raúl Scalabrini Ortiz 1150, Palermo. 54 m² (51 m² covered + 3 m² balcony). Open-plan living/dining room with an integrated kitchen, large windows, balcony access. Oven, cooktop, ample storage space. Bedroom with a large mirrored sliding-door closet. Bathroom with bathtub and shower screen. Amenities: elevator, rooftop terrace with pool, barbecue grill, laundry room with washer and dryer, security, jacuzzi. No parking. Available from January 18, 2027. Minimum stay: 3 months. Price: USD 900/month + expensas ≈ARS 299,000 + internet, electricity, ABL, and other utilities. No data: lease term, deposit, pets, coordinates.",
     "other_amenities_en": "Jacuzzi, security.",
     "contract_term_en": "Minimum 3 months",
-    "sub_barrios": [
-      "Palermo Soho",
-      "Palermo Viejo"
-    ],
     "sub_barrio": "Palermo Soho",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "V-0002",
@@ -1963,7 +1858,6 @@
     "description_en": "Bright 3-room apartment for sale, 6th floor, Ecuador 1230, Recoleta (a few meters from Av. Santa Fe and Av. Las Heras). 107 m² (95 m² covered + 13 m² semi-covered). Front-facing, east orientation, excellent natural light. Unfurnished. Spacious living/dining room with access to a large terrace-balcony. Separate, fully equipped kitchen with high-end appliances. 2 bedrooms with built-in closets, dressing room. 2 full bathrooms. Central air conditioning and heating. 26-year-old building, well maintained. Fixed parking space — inquire. Suitable for professional use. Price: USD 248,000. Monthly expensas ≈ARS 450,000. No data: coordinates.",
     "other_amenities_en": "High-quality common areas in the building.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -2002,7 +1896,6 @@
     "description_en": "Brand-new 2-room apartment for sale, Gallo 1215, Palermo (near the Universidad de Palermo and a short distance from UBA). 51 m² (40 m² covered + 10 m² semi-covered). Unfurnished, equipped kitchen. Large, bright living/dining room with access to a 10 m² terrace-balcony with a private barbecue grill. Bedroom with a built-in closet, full bathroom. Smart building access. Pets allowed, suitable for professional use. Amenities: pool, solarium, laundry room, SUM with a barbecue grill, changing rooms, security, Wi-Fi. Brand-new building. Price: USD 183,000. Also available in the same building: studios starting at USD 94,000, 2-room units starting at USD 140,000. No data: floor, expensas, coordinates.",
     "other_amenities_en": "Solarium, SUM with a barbecue grill, changing rooms, security, Wi-Fi, professional use allowed.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -2041,11 +1934,8 @@
     "description_en": "Spacious and functional 4-room apartment for sale, Blanco Encalada 1400, Belgrano. 105 m² (97 m² covered + 8 m² semi-covered). Well-maintained building with 24-hour security and a SUM. Comfortable living/dining room with an excellent layout. Separate kitchen with ample storage space and a laundry room (with washing machine). 3 bedrooms, 1 full bathroom, and 1 toilet. Includes covered parking and a storage unit. Balcony, air conditioning, heating, radiant floor heating. Pets allowed. Mortgage purchase accepted. 45-year-old building. Amenities: quincho (barbecue house), patio. Price: USD 279,000. Approximate expensas: ARS 450,000/month. No data: floor, availability date, coordinates.",
     "other_amenities_en": "SUM/multipurpose room, quincho (barbecue house), patio, 24/7 security, electric entrance door.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Belgrano C"
-    ],
-    "sub_barrio": "Belgrano C",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0048",
@@ -2082,7 +1972,6 @@
     "description_en": "Bright furnished 1-bedroom apartment (2 rooms) on the 15th floor of the prestigious Torre Topacio, Gorriti 3500, between Palermo Soho and Recoleta (near Alto Palermo Shopping, Parque Las Heras, and the Cementerio de Recoleta). 49 m² (46 m² covered). Rear-facing, quiet, very bright, open view. Living/dining room, fully equipped kitchen. Includes covered parking. Amenities: 24-hour security, pools (indoor and outdoor), solarium, sauna, gym, barbecue grill, laundry room, game room, elevators. Price: USD 1,200/month + expensas ARS 365,000. No data: lease term, deposit, pets, availability date, coordinates.",
     "other_amenities_en": "Solarium, sauna, game room, elevators, accessibility for people with reduced mobility.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -2121,11 +2010,8 @@
     "description_en": "Bright furnished studio apartment on the 5th floor, Jorge Newbery 1764, Las Cañitas (near Av. del Libertador and Luis María Campos). Rear-facing, quiet view, balcony overlooking the block. Semi-private floor for added privacy. The building has a pool and solarium. Suitable for professional use. No pets or smoking allowed. Price: USD 650/month + expensas ARS 190,000. Wi-Fi is paid by the tenant. ATTENTION: this listing appears twice in DEPTOS DISPONIBLES, merged into a single row. No data: surface area, lease term, deposit, availability date, coordinates.",
     "other_amenities_en": "Solarium.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Las Cañitas"
-    ],
-    "sub_barrio": "Las Cañitas",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0050",
@@ -2162,7 +2048,6 @@
     "description_en": "Bright, quiet, fully furnished 2-room apartment, with a balcony and an open green view, Freire 2200, Belgrano R. Rear-facing. Freshly painted, tastefully decorated, move-in ready. Living/dining room with a large window, Smart TV, gas heating, electric convector heater, split air conditioning. Separate, fully equipped kitchen with a washing machine. Bedroom with a double bed, split air conditioning, built-in closet, floor-to-ceiling window with balcony access. Full bathroom with bathtub and bidet. Parquet flooring. High-speed WiFi, cable TV. ATTENTION: not suitable for people with reduced mobility (stairs-only access). Maximum 2 adults, no pets, non-smokers. Price: USD 750/month, ABL included, expensas ARS 145,000 + utilities separate. Minimum term: 6 months. No data: surface area, floor, availability date, coordinates.",
     "other_amenities_en": "",
     "contract_term_en": "Minimum 6 months, extendable",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -2201,12 +2086,8 @@
     "description_en": "Brand-new, fully furnished and equipped 2-room apartment on the 1st floor, Costa Rica 5400, Palermo Hollywood. Front balcony and private patio. 46 m². Fully equipped: Nespresso coffee machine, microwave, refrigerator, electric oven, cooktop, Smart TV, air conditioning, blackout curtains, safe. Amenities: gym, dry sauna, Turkish jacuzzi, rooftop terrace with SUM, laundry room. Two options: for sale at USD 175,000 or short-term rental at USD 1,200/month + expensas ARS 175,000. No data: lease term, deposit, pets, availability date, coordinates.",
     "other_amenities_en": "Dry sauna, Turkish jacuzzi, rooftop terrace with SUM, commercial units on the 1st floor, accessibility for people with reduced mobility.",
     "contract_term_en": "Short-term rental (as an alternative to sale)",
-    "sub_barrios": [
-      "Palermo Hollywood",
-      "Palermo Soho"
-    ],
-    "sub_barrio": "Palermo Hollywood",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "Palermo Soho",
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0051",
@@ -2243,11 +2124,8 @@
     "description_en": "Spacious 150 m² apartment with 3 bedrooms, 2 bathrooms, and 1 toilet, Av. del Libertador 5000, Las Cañitas. Unfurnished. Corner apartment, fully exterior-facing, northeast orientation, excellent views, balcony. Spacious living/dining room, 3 bedrooms (one en-suite), maid's room. Fully renovated: new windows, renovated electrical wiring and lighting, restored furniture. Includes parking with valet service. Amenities: security, accessibility for people with reduced mobility. Available now. Price: USD 2,800/month + expensas ARS 800,000. No data: floor, lease term, deposit, pets, coordinates.",
     "other_amenities_en": "Security, accessibility for people with reduced mobility.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Las Cañitas"
-    ],
     "sub_barrio": "Las Cañitas",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0052",
@@ -2284,7 +2162,6 @@
     "description_en": "Brand-new premium 3-room apartment, 3 de Febrero 1400, Belgrano. 103 m² (88 m² covered + 15 m² balcony). Unfurnished. Spacious living/dining room with access to a large balcony. Open kitchen with a breakfast bar. 2 bedrooms with built-in closets. 2 bathrooms + 1 toilet. High-quality modern finishes. Amenities: pool with solarium, SUM, accessibility for people with reduced mobility. ATTENTION: parking spaces available only for an additional cost of USD 45,000 (purchased separately). Price: USD 3,000/month + expensas ≈ARS 600,000 + utilities. No data: floor, lease term, deposit, pets, availability date, coordinates.",
     "other_amenities_en": "SUM.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -2323,11 +2200,8 @@
     "description_en": "Fully furnished and equipped 2-bedroom apartment (3 rooms) on the 2nd floor, Beruti 4449, Palermo. Rear-facing (overlooks the building's inner courtyard). Living/dining room. Electric kitchen with a built-in oven and ceramic cooktop. Full bathroom. Washing-machine hookup (machine not included). Well-maintained building, with an on-site super and security cameras. Shared rooftop terrace, 2 elevators, heating, air conditioning, internet. Pets allowed. Prime location near La Rural, embassies, Plaza Italia, Av. del Libertador, the Rosedal, and the Jardín Botánico. Price: USD 1,300/month + expensas starting at ARS 200,000. Short-term or long-term rental. No data: lease term, deposit, availability date, coordinates.",
     "other_amenities_en": "Shared rooftop terrace, 2 elevators, internet.",
     "contract_term_en": "Short-term or long-term rental",
-    "sub_barrios": [
-      "Palermo Nuevo"
-    ],
-    "sub_barrio": "Palermo Nuevo",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio": "",
+    "sub_barrio_boundary_version": ""
   },
   {
     "id": "A-0054",
@@ -2364,11 +2238,8 @@
     "description_en": "2-bedroom apartment (3 rooms) with a park view and a barbecue grill, Migueletes 1200, on the border of Las Cañitas and Belgrano. The website provides minimal information beyond the title and price. Price: USD 2,700/month, all-inclusive (per DEPTOS). No data: surface area, bathrooms, floor, lease term, deposit, pets, availability date, coordinates.",
     "other_amenities_en": "Park/green area nearby (per the page title).",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Las Cañitas"
-    ],
     "sub_barrio": "Las Cañitas",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "V-0006",
@@ -2405,7 +2276,6 @@
     "description_en": "Studio apartment for sale, 41 m² (37 m² covered), Remedios Escalada de San Martín 900, Villa Crespo. Unfurnished. Modern and bright, excellent natural light. Modern integrated kitchen, ample storage space. Full bathroom with quality finishes. Northwest orientation, rear-facing. 11-year-old building. Suitable for professional use, mortgage-eligible. Pets allowed. Amenities: pool with solarium, fully equipped gym, SUM, barbecue grills, laundry room, rooftop garden, terrace, patio, reception, security, free parking for owners and visitors. Price: USD 79,000. Monthly expensas ≈ARS 150,000. No data: floor, coordinates.",
     "other_amenities_en": "Solarium, SUM, rooftop garden, terrace, patio, reception, building staff, cleaning service, changing rooms, security, free parking for owners and guests.",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -2444,7 +2314,6 @@
     "description_en": "Functional 3-room apartment for sale, 7th floor, Av. Santa Fe 2441, Recoleta. 60 m². Comfortable living/dining room, 2 bedrooms with built-in closets, 1 full bathroom. Separate kitchen with appliances, space for air-conditioning installation. Private laundry area inside the apartment. Side-facing, northwest orientation. Smart building access. Water heater. Pets allowed, mortgage-eligible. 28-year-old building. Price: USD 155,000. Monthly expensas ≈ARS 190,000. No data: coordinates.",
     "other_amenities_en": "Boiler (water heater).",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -2483,11 +2352,8 @@
     "description_en": "Duplex for sale (2 rooms) with two balconies, recently renovated. ADDRESS: DEPTOS lists Cabrera 3900 (matching the A-0017 rental listing), while the website lists Cabrera 5900 (possibly a website error), Palermo Hollywood. Fully furnished and equipped: sofa bed, TV, outdoor furniture, queen bed. Full bathroom with bathtub. Kitchen with washing machine and complete equipment. Ample storage space. Amenities: outdoor pool, parking available. Price: USD 200,000. ATTENTION: the description is almost identical to that of the A-0017 rental listing — probably the same apartment, also listed for sale. Confirm status with the agency. No data: surface area, floor, coordinates.",
     "other_amenities_en": "Parking space available.",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Hollywood"
-    ],
     "sub_barrio": "Palermo Hollywood",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "V-0009",
@@ -2524,7 +2390,6 @@
     "description_en": "Brand-new studio apartment with a balcony, 10th floor, Av. Independencia 4083, Boedo. Front-facing, lots of natural light thanks to a large 4-meter window. Open kitchen with a double countertop and space for a full-size refrigerator. Previously designed and set up for Airbnb rental — an investment opportunity. 38–40 m² total with balcony. Amenities: pool, barbecue grill, SUM, outdoor common area with furniture, building manager. All utilities connected. Price: USD 90,000. Expensas ≈ARS 140,000. Investment potential (not a current rental income): Airbnb ≈USD 900–1,000/month, long-term rental ≈USD 600–700/month. No data: bathrooms, furnishing status, coordinates.",
     "other_amenities_en": "SUM, open common area with furniture, building manager, home-office area, all utilities connected (water, electricity, gas, sewage, internet, cable, telephone).",
     "contract_term_en": "",
-    "sub_barrios": [],
     "sub_barrio": "",
     "sub_barrio_boundary_version": ""
   },
@@ -2563,11 +2428,8 @@
     "description_en": "3-room apartment, Palermo Chico (exact address not specified). Like-new furnishings, renovated a few months ago. No amenities. ATTENTION: the listing was removed from the website (404 error when checked on 11/03/2026) — data taken solely from the DEPTOS DISPONIBLES spreadsheet, not verified on the website. Available from December 1, 2026 (per DEPTOS). Price: USD 1,600/month, all-inclusive. Current status must be confirmed with the agency before any action is taken. No data: exact address, surface area, bathrooms, floor, lease term, deposit, pets, coordinates.",
     "other_amenities_en": "",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Chico"
-    ],
     "sub_barrio": "Palermo Chico",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0056",
@@ -2604,12 +2466,8 @@
     "description_en": "Brand-new studio apartment with a partition, with amenities, Humboldt 1800, Palermo Hollywood. Fully furnished, with a washing machine and a large refrigerator (per DEPTOS). The website offers minimal information, only the title ('new divided studio with amenities') and the price of $1,200, which matches DEPTOS. New building. Available from November 1, 2026. Amenities (per DEPTOS): pool, gym, SUM, security. Price: USD 1,200/month + expensas and utilities (exact amount not specified). No data: exact surface area, bathrooms, floor, lease term, deposit, coordinates.",
     "other_amenities_en": "SUM, security (per DEPTOS).",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Hollywood",
-      "Palermo Soho"
-    ],
     "sub_barrio": "Palermo Hollywood",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   },
   {
     "id": "A-0057",
@@ -2646,11 +2504,7 @@
     "description_en": "Brand-new, unfurnished 2-room apartment (56 m²), Gurruchaga 2400, in the Palermo Soho/Botánico area. Available immediately. The website offers minimal information; the title confirms the address. Amenities (per DEPTOS): indoor and outdoor pool, garden, barbecue grills, sauna, gym, coworking space, SUM, 24-hour security. Price: USD 1,000/month. No data: bathrooms, floor, lease term, deposit, pets, expensas, coordinates.",
     "other_amenities_en": "Garden, coworking space, sauna, SUM, 24-hour security (per DEPTOS).",
     "contract_term_en": "",
-    "sub_barrios": [
-      "Palermo Soho",
-      "Palermo Viejo"
-    ],
     "sub_barrio": "Palermo Soho",
-    "sub_barrio_boundary_version": "1.0"
+    "sub_barrio_boundary_version": "2.0"
   }
 ]
