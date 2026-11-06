@@ -61,7 +61,6 @@
       allDistricts: "Все районы",
       subBarrio: "Подрайон",
       allSubBarrios: "Все подрайоны",
-      showSubBarrios: "Показывать границы подрайонов",
       subBarrioLabel: "Подрайон:",
       informalNote: "неофициальная граница, низкая точность",
       price: "Цена, USD",
@@ -87,7 +86,6 @@
       allDistricts: "All neighborhoods",
       subBarrio: "Sub-neighborhood",
       allSubBarrios: "All sub-neighborhoods",
-      showSubBarrios: "Show sub-neighborhood boundaries",
       subBarrioLabel: "Sub-neighborhood:",
       informalNote: "informal boundary, low accuracy",
       price: "Price, USD",
@@ -148,6 +146,17 @@
 
   function barrioFor(district) {
     return DISTRICT_TO_BARRIO[primaryDistrictKey(district)] || null;
+  }
+
+  // These four now have their own dedicated "Подрайон" filter, so showing
+  // them again in the main "Район" list would just duplicate that choice.
+  // The main list collapses them into their parent barrio; the sub-barrio
+  // filter is still the only way to narrow to one of them specifically.
+  var SUBBARRIO_FILTER_KEYS = ["palermo chico", "palermo soho", "palermo hollywood", "las cañitas"];
+
+  function districtFilterKey(district) {
+    var key = primaryDistrictKey(district);
+    return SUBBARRIO_FILTER_KEYS.indexOf(key) === -1 ? key : "palermo";
   }
 
   function formatUsd(amount, isRent, lang) {
@@ -286,7 +295,7 @@
   var amenityChipEls = [];
 
   var map, markersLayer, barriosLayer, barriosByName = {}, layersControl;
-  var subbarriosLayer, subbarriosByName = {}, subbarriosVisible = false;
+  var subbarriosLayer, subbarriosByName = {};
   var SUBBARRIO_HIGHLIGHT_STYLE = { color: "#8e44ad", weight: 3, fillColor: "#d8b6e8", fillOpacity: 0.25, opacity: 0.9 };
   var baseLayers = {};
 
@@ -371,43 +380,29 @@
         subbarriosByName[p.name] = layer;
       },
     });
-    // Hidden by default (toggle controls visibility); not added to map yet.
+    // None of its sub-layers are added to the map here: each is shown only
+    // while it is the selected sub-barrio (see highlightSubbarrio).
   }
 
-  function setSubbarriosVisible(visible) {
-    subbarriosVisible = visible;
-    if (!subbarriosLayer) return;
-    if (visible) {
-      if (!map.hasLayer(subbarriosLayer)) subbarriosLayer.addTo(map);
-      // Re-apply the highlight (if any) now that the layer is actually drawn.
-      subbarriosLayer.eachLayer(function (layer) {
-        layer.setStyle(
-          layer.feature.properties.name === state.subBarrio
-            ? SUBBARRIO_HIGHLIGHT_STYLE
-            : subbarrioStyle(layer.feature)
-        );
-      });
-    } else if (map.hasLayer(subbarriosLayer)) {
-      map.removeLayer(subbarriosLayer);
-    }
-  }
+  // Selecting a sub-barrio both filters markers and draws just that one
+  // boundary, highlighted; picking "all" (empty name) clears it. There is
+  // no separate visibility toggle — the filter selection is the only
+  // thing that controls whether any boundary is drawn.
+  var activeSubbarrioLayer = null;
 
-  // Selecting a sub-barrio always filters markers and zooms the map to its
-  // extent (getBounds() works on a Leaflet layer whether or not it is on
-  // the map). It never changes layer visibility itself — the checkbox is
-  // the single source of truth for whether any boundary is drawn.
   function highlightSubbarrio(name) {
     if (!subbarriosLayer) return;
-    subbarriosLayer.eachLayer(function (layer) {
-      layer.setStyle(subbarrioStyle(layer.feature));
-    });
+    if (activeSubbarrioLayer) {
+      map.removeLayer(activeSubbarrioLayer);
+      activeSubbarrioLayer = null;
+    }
     if (!name) return;
     var layer = subbarriosByName[name];
     if (!layer) return;
-    if (subbarriosVisible) {
-      layer.setStyle(SUBBARRIO_HIGHLIGHT_STYLE);
-      layer.bringToFront();
-    }
+    layer.setStyle(SUBBARRIO_HIGHLIGHT_STYLE);
+    layer.addTo(map);
+    layer.bringToFront();
+    activeSubbarrioLayer = layer;
     map.fitBounds(layer.getBounds(), { padding: [40, 40] });
   }
 
@@ -444,7 +439,7 @@
       var matchesType = state.activeTypes.has(obj.type) || (obj.type === "both" && (state.activeTypes.has("rent") || state.activeTypes.has("sale")));
       if (!matchesType) return false;
     }
-    if (state.district && primaryDistrictKey(obj.district) !== state.district) return false;
+    if (state.district && districtFilterKey(obj.district) !== state.district) return false;
     if (state.subBarrio && obj.sub_barrio !== state.subBarrio) return false;
     if (state.priceMin !== null && Number(obj.price) < state.priceMin) return false;
     if (state.priceMax !== null && Number(obj.price) > state.priceMax) return false;
@@ -527,7 +522,7 @@
     var seen = {};
     var options = [];
     objects.forEach(function (o) {
-      var key = primaryDistrictKey(o.district);
+      var key = districtFilterKey(o.district);
       if (key && !seen[key]) {
         seen[key] = true;
         options.push(key);
@@ -575,12 +570,6 @@
     });
   }
 
-  function bindSubbarrioToggle() {
-    document.getElementById("toggle-subbarrios").addEventListener("change", function (e) {
-      setSubbarriosVisible(e.target.checked);
-    });
-  }
-
   function applyStaticText() {
     var t = STRINGS[state.lang];
     document.documentElement.lang = state.lang;
@@ -590,7 +579,6 @@
     document.getElementById("option-all-districts").textContent = t.allDistricts;
     document.getElementById("label-subbarrio").textContent = t.subBarrio;
     document.getElementById("option-all-subbarrios").textContent = t.allSubBarrios;
-    document.getElementById("label-subbarrios-toggle").textContent = t.showSubBarrios;
     document.getElementById("label-price").textContent = t.price;
     document.getElementById("label-amenities").textContent = t.amenities;
     document.getElementById("reset-filters").textContent = t.reset;
@@ -673,7 +661,6 @@
         buildAmenityChips();
         buildDistrictSelect(objects);
         buildSubbarrioSelect(subbarrios.features);
-        bindSubbarrioToggle();
         bindPriceInputs();
         bindReset();
         bindLangSwitch();

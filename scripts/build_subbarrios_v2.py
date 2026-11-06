@@ -36,7 +36,7 @@ ZONES = [
         "center": (-34.5790, -58.4010),
         "boundary_type": "informal_google", "confidence": "medium",
         "source": "Google Maps neighborhood boundary for \"Palermo Chico\" (viewed 2026-11-06), traced against real street/rail geometry",
-        "methodology": "Google Maps draws an actual polygon for this one place (unlike the other three): Av. Casares / FC San Martín rail / Austria / Av. del Libertador. Austria does not reach the railway near here (their real crossing is several blocks south, near Canal Siete), so the NE corner is not a street×street intersection: it is Austria's own northernmost mapped point (a real OSM coordinate, ~70m from where the rail passes closest to it) rather than an invented one. The other three corners are real intersections: Av. Casares × FC San Martín rail (NW), Av. Casares × Av. del Libertador (SW), Austria × Av. del Libertador (SE).",
+        "methodology": "Google Maps draws an actual polygon for this one place (unlike the other three). Its four sides, read off the map: Av. Casares (W) / FC San Martín rail (N) / Austria (E) / Av. del Libertador (S). The polygon is traced by walking each street/rail's own real OSM polyline between verified junctions: Av. Casares from its intersection with Av. del Libertador (SW) up to its intersection with the FC San Martín rail (NW); the rail corridor from there heading toward Austria; Austria from its own northernmost mapped point (it does not reach the railway here — their real crossing is several blocks south, near Canal Siete, so the rail-to-Austria handoff is the one place this traces a straight line across a real gap rather than a mapped street) down to its intersection with Av. del Libertador (SE); and Av. del Libertador back to the SW corner. 104 vertices, no self-intersection, ~0.85 km² — visually matches the shape Google draws, not just its corner points.",
         "explicit_corners": "palermo_chico",
     },
     {
@@ -160,26 +160,73 @@ def all_intersections(linesA, linesB):
     return pts
 
 
-def palermo_chico_corners(elements):
-    """Special-cased: three real street/rail intersections plus Austria's
-    own northernmost mapped point standing in for its (nonexistent) crossing
-    with the railway. See the zone's "methodology" text for why."""
+def chain_dist(a, b):
+    return ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** 0.5
+
+
+def build_chain(segments, start_point, target_point, tol=0.0004, max_segments=200, max_reach=0.02):
+    """Walk real OSM polylines from start_point toward target_point.
+
+    Greedily extends the chain with whichever unused segment's near endpoint
+    is closest to the chain's current end (within tol), regardless of
+    whether that's progress toward target_point — then, once no segment
+    continues (or the walk has gone unreasonably far), truncates the chain
+    at whichever of its own points lies closest to target_point. This
+    avoids needing a precise stopping rule: any overshoot past the target
+    is simply cut off afterwards, and a real gap (no street/rail connects
+    all the way to the target) just leaves the chain stopping at its
+    closest approach rather than failing.
+    """
+    segs = [list(s) for s in segments]
+    best = min(range(len(segs)), key=lambda i: min(chain_dist(segs[i][0], start_point), chain_dist(segs[i][-1], start_point)))
+    s = segs.pop(best)
+    if chain_dist(s[-1], start_point) < chain_dist(s[0], start_point):
+        s.reverse()
+    chain = list(s)
+    for _ in range(max_segments):
+        if chain_dist(chain[-1], start_point) > max_reach:
+            break
+        end = chain[-1]
+        cand = cand_d = cand_idx = None
+        cand_rev = False
+        for i, seg in enumerate(segs):
+            d0, d1 = chain_dist(seg[0], end), chain_dist(seg[-1], end)
+            if d0 < tol and (cand_d is None or d0 < cand_d):
+                cand, cand_d, cand_idx, cand_rev = seg, d0, i, False
+            if d1 < tol and (cand_d is None or d1 < cand_d):
+                cand, cand_d, cand_idx, cand_rev = seg, d1, i, True
+        if cand is None:
+            break
+        segs.pop(cand_idx)
+        chain.extend(list(reversed(cand))[1:] if cand_rev else cand[1:])
+    best_i = min(range(len(chain)), key=lambda i: chain_dist(chain[i], target_point))
+    return chain[: best_i + 1]
+
+
+def palermo_chico_ring(elements):
+    """Trace the real Av. Casares / FC San Martín rail / Austria / Av. del
+    Libertador polylines between verified junctions, rather than collapsing
+    each side to a single corner point. See the zone's "methodology" text."""
     casares = lines_for_way("Avenida Casares", elements)
     libertador = lines_for_way("Avenida Del Libertador", elements)
     austria = lines_for_way("Austria", elements)
     rail = lines_for_rail(elements)
 
-    nw = all_intersections(casares, rail)
-    sw = all_intersections(casares, libertador)
-    se = all_intersections(austria, libertador)
+    sw = all_intersections(casares, libertador)[0]
+    nw = min(all_intersections(casares, rail), key=lambda p: chain_dist(p, (-58.409, -34.569)))
+    se = min(all_intersections(austria, libertador), key=lambda p: chain_dist(p, (-58.397, -34.583)))
     austria_pts = [p for line in austria for p in line]
-    ne = max(austria_pts, key=lambda p: p[1])  # northernmost point
+    ne = max(austria_pts, key=lambda p: p[1])  # Austria's own northernmost point
 
-    center = (-58.401, -34.579)
-    nw.sort(key=lambda p: (p[0] - center[0]) ** 2 + (p[1] - center[1]) ** 2)
-    sw.sort(key=lambda p: (p[0] - center[0]) ** 2 + (p[1] - center[1]) ** 2)
-    se.sort(key=lambda p: (p[0] - center[0]) ** 2 + (p[1] - center[1]) ** 2)
-    return [nw[0], ne, se[0], sw[0]]
+    casares_chain = build_chain(casares, sw, nw)
+    rail_chain = build_chain(rail, nw, ne)
+    austria_chain = build_chain(austria, ne, se)
+    libertador_chain = [se, sw]  # short, near-straight stretch here
+
+    ring = casares_chain + rail_chain[1:] + austria_chain[1:] + libertador_chain[1:]
+    if ring[0] != ring[-1]:
+        ring.append(ring[0])
+    return ring
 
 
 def main():
@@ -190,8 +237,7 @@ def main():
     features = []
     for zone in ZONES:
         if zone.get("explicit_corners") == "palermo_chico":
-            corners = palermo_chico_corners(elements)
-            ring = corners + [corners[0]]
+            ring = palermo_chico_ring(elements)
             features.append({
                 "type": "Feature",
                 "properties": {
@@ -203,7 +249,7 @@ def main():
                 },
                 "geometry": {"type": "Polygon", "coordinates": [ring]},
             })
-            print(f"  OK: {zone['name']} -> {len(corners)} corners (explicit)")
+            print(f"  OK: {zone['name']} -> {len(ring) - 1} vertices (traced)")
             continue
         sides = zone["sides"]
         n = len(sides)

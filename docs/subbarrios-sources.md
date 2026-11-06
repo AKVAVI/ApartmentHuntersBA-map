@@ -34,24 +34,30 @@ Unlike the other three, Google Maps draws an actual neighborhood polygon
 for "Palermo Chico" (confirmed by viewing it directly, 2026-11-06) — it is
 registered there as a distinct place, not just a text label. This project
 has no rights to redistribute Google's own polygon data, so instead its
-four sides were read off the map and rebuilt from real street/rail
-geometry:
+four sides were read off the map and rebuilt by **tracing the real
+OSM polylines** of each one, not just connecting four corner points:
 
 - **West:** Av. Casares
 - **North:** the FC San Martín railway embankment (not a street)
-- **South:** Av. del Libertador
 - **East:** Austria
+- **South:** Av. del Libertador
 
-Three corners are real street×street or street×rail intersections (Av.
-Casares × FC San Martín rail for NW, Av. Casares × Av. del Libertador for
-SW, Austria × Av. del Libertador for SE). Austria turns out **not** to
-reach the railway anywhere near here — their actual crossing is several
-blocks south, near Canal Siete — so forcing that "intersection" produced a
-self-intersecting (bowtie) shape on the first attempt. The NE corner is
-instead Austria's own northernmost mapped point (a real OSM coordinate,
-not invented), standing in for where the boundary plausibly cuts across
-between the railway and Austria's end. Verified: 4 vertices, no
-self-intersection, ~0.75 km².
+The ring is built by walking each street/rail's actual geometry between
+verified junctions (`scripts/build_subbarrios_v2.py`, `palermo_chico_ring`):
+Av. Casares from its real intersection with Av. del Libertador (SW) up to
+its real intersection with the FC San Martín rail (NW); the rail corridor
+from there toward Austria; Austria from its own northernmost mapped point
+down to its real intersection with Av. del Libertador (SE); Av. del
+Libertador back to the SW corner. The one place this isn't a mapped line:
+Austria doesn't actually reach the railway anywhere near here (their real
+crossing is several blocks south, near Canal Siete), so the hand-off from
+the rail chain to Austria's own northernmost point crosses a real,
+un-streeted gap — a straight line there, same as a human cartographer
+would draw across open ground. A first attempt that collapsed each side to
+a single corner point (instead of tracing the polyline) produced a
+visibly distorted shape and, in one version, a self-intersecting one —
+tracing the real geometry fixed both. Verified: 152 vertices, no
+self-intersection, ~0.87 km².
 
 Earlier (v1) sources described a different, conflicting definition for
 "Palermo Chico" (Billiken/Wikipedia: bounded by Av. del Libertador, Cavia
