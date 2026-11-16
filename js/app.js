@@ -566,7 +566,37 @@
     return true;
   }
 
+  // Phones: a Leaflet popup lives inside the map's transformed pane, where
+  // iOS fights its inner scrolling and snaps it back. Show the listing in a
+  // plain bottom sheet outside the map instead (native scrolling).
+  function isMobileLayout() {
+    return window.matchMedia("(max-width: 760px)").matches;
+  }
+
+  function closeSheet() {
+    var sheet = document.getElementById("sheet");
+    if (sheet) sheet.hidden = true;
+  }
+
+  function openSheet(obj, marker) {
+    var sheet = document.getElementById("sheet");
+    document.getElementById("sheet-body").innerHTML = buildPopup(obj, state.lang);
+    sheet.hidden = false;
+    sheet.scrollTop = 0;
+    // keep the tapped marker visible above the sheet
+    var size = map.getSize();
+    var pt = map.latLngToContainerPoint(marker.getLatLng());
+    var targetY = size.y * 0.3;
+    if (pt.y > targetY || pt.y < 20) map.panBy([0, pt.y - targetY], { animate: true });
+  }
+
+  function bindSheet() {
+    document.getElementById("sheet-close").addEventListener("click", closeSheet);
+    map.on("click", closeSheet);
+  }
+
   function render() {
+    closeSheet();
     markersLayer.clearLayers();
     var shown = 0;
     state.objects.forEach(function (obj) {
@@ -581,7 +611,14 @@
         color: "#fff",
         weight: 2,
       });
-      marker.bindPopup(buildPopup(obj, state.lang), { maxWidth: 300, autoPanPadding: [20, 20] });
+      if (isMobileLayout()) {
+        marker.on("click", function (e) {
+          L.DomEvent.stop(e);
+          openSheet(obj, marker);
+        });
+      } else {
+        marker.bindPopup(buildPopup(obj, state.lang), { maxWidth: 300, autoPanPadding: [20, 20] });
+      }
       marker.addTo(markersLayer);
     });
     document.getElementById("results-count").textContent = shown;
@@ -790,6 +827,7 @@
         bindLangSwitch();
         bindSubteToggle();
         bindRuler();
+        bindSheet();
         applyStaticText();
         document.getElementById("total-count").textContent = objects.length;
         render();

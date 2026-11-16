@@ -323,3 +323,42 @@ select { width: 100%; }
   }
   #map { height: 58vh; }
 }
+
+.sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  max-height: 62dvh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--color-panel);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.18);
+  padding: 16px 16px calc(20px + env(safe-area-inset-bottom));
+}
+
+.sheet[hidden] { display: none; }
+
+.sheet .popup-card {
+  max-height: none;
+  overflow: visible;
+  font-size: 14.5px;
+}
+
+.sheet-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-bg);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-text-muted);
+}
