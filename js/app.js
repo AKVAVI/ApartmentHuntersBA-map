@@ -305,8 +305,8 @@
   var baseLayers = {};
 
   var BASE_LAYER_LABELS = {
-    ru: { street: "Улицы (похоже на Google Maps)", light: "Светлая (минимализм)", osm: "OpenStreetMap (классика)" },
-    en: { street: "Streets (like Google Maps)", light: "Light (minimal)", osm: "OpenStreetMap (classic)" },
+    ru: { brand: "Фирменная (в стиле сайта)", street: "Улицы (похоже на Google Maps)", light: "Светлая (минимализм)", osm: "OpenStreetMap (классика)" },
+    en: { brand: "Branded (site style)", street: "Streets (like Google Maps)", light: "Light (minimal)", osm: "OpenStreetMap (classic)" },
   };
 
   var BARRIO_DEFAULT_STYLE = { color: "#b5693b", weight: 1, fillOpacity: 0.02, opacity: 0.35 };
@@ -330,16 +330,41 @@
       attribution: "© OpenStreetMap contributors",
     });
 
-    baseLayers.street.addTo(map);
+    // Vector basemap recolored to the site's palette (see
+    // scripts/build_basemap_style.py). Needs WebGL; fall back to Esri
+    // raster tiles if the plugin or WebGL isn't available.
+    if (L.maplibreGL && window.maplibregl && maplibregl.supported !== false) {
+      try {
+        baseLayers.brand = L.maplibreGL({
+          style: new URL("data/basemap-style.json?v=7", location.href).href,
+          attribution: "© OpenStreetMap contributors, © OpenFreeMap",
+        });
+      } catch (err) {
+        baseLayers.brand = null;
+      }
+    }
+    (baseLayers.brand || baseLayers.street).addTo(map);
     buildLayersControl();
 
     markersLayer = L.layerGroup().addTo(map);
+
+    // On touch screens a swipe inside a popup was also starting a map drag
+    // (the popup sits inside the map pane), which fought the popup's own
+    // scrolling and snapped the view back. Keep touches inside the popup.
+    map.on("popupopen", function (e) {
+      var el = e.popup.getElement();
+      if (!el) return;
+      ["touchstart", "touchmove", "pointerdown", "mousedown", "wheel"].forEach(function (type) {
+        L.DomEvent.on(el, type, L.DomEvent.stopPropagation);
+      });
+    });
   }
 
   function buildLayersControl() {
     if (layersControl) map.removeControl(layersControl);
     var labels = BASE_LAYER_LABELS[state.lang];
     var layersMap = {};
+    if (baseLayers.brand) layersMap[labels.brand] = baseLayers.brand;
     layersMap[labels.street] = baseLayers.street;
     layersMap[labels.light] = baseLayers.light;
     layersMap[labels.osm] = baseLayers.osm;
@@ -556,7 +581,7 @@
         color: "#fff",
         weight: 2,
       });
-      marker.bindPopup(buildPopup(obj, state.lang), { maxWidth: 300 });
+      marker.bindPopup(buildPopup(obj, state.lang), { maxWidth: 300, autoPanPadding: [20, 20] });
       marker.addTo(markersLayer);
     });
     document.getElementById("results-count").textContent = shown;

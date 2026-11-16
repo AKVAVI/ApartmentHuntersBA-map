@@ -25,7 +25,13 @@ html, body {
 #app {
   display: flex;
   height: 100vh;
+  height: 100dvh;
   width: 100vw;
+}
+
+.leaflet-popup-content-wrapper,
+.popup-card {
+  touch-action: pan-y;
 }
 
 #sidebar {
